@@ -1,0 +1,15 @@
+% list of tables
+
+%LOT Initializations
+\renewcommand{\cftlottitlefont}{\hfill}   %these two lines center TOC title and change to normal
+\renewcommand{\cftafterlottitle}{\hfill}			 %size font
+\renewcommand{\listtablename}{LIST OF TABLES}
+\renewcommand{\cftbeforelottitleskip}{-.325in} % make TOC title flush with top margin of 1in
+\renewcommand{\cftafterlottitleskip}{-10in} % make TOC title closer to top of TOC content
+
+%LOF Table Adjustments
+\renewcommand{\cfttabdotsep}{0.25}                 %adjust dot spacing
+\setlength\cfttabindent{0pt}
+
+\addcontentsline{toc}{part}{List of Tables}
+\listoftables

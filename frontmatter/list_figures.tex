@@ -1,0 +1,15 @@
+% list of figures
+
+%LOF Initializations
+\renewcommand{\cftloftitlefont}{\hfill}   %these two lines center TOC title and change to normal
+\renewcommand{\cftafterloftitle}{\hfill}			 %size font
+\renewcommand{\listfigurename}{LIST OF FIGURES}
+\renewcommand{\cftbeforeloftitleskip}{-.325in} % make TOC title flush with top margin of 1in
+\renewcommand{\cftafterloftitleskip}{-10in} % make TOC title closer to top of TOC content
+
+%LOF Figure Adjustments
+\renewcommand{\cftfigdotsep}{0.25}                 %adjust dot spacing
+\setlength\cftfigindent{0pt}
+
+\addcontentsline{toc}{part}{List of Figures}
+\listoffigures

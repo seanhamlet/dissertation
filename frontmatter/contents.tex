@@ -1,0 +1,28 @@
+% table of contents
+
+\pdfbookmark[-1]{Table of Contents}{tableofcontents}
+
+% heading adjustment
+\renewcommand{\cfttoctitlefont}{\hfil}
+\renewcommand{\cftaftertoctitle}{\hfil}
+\renewcommand{\contentsname}{{\uppercase{table of contents}}}
+\setlength{\cftbeforetoctitleskip}{-.325in} % make TOC title flush with top margin of 1in
+\setlength{\cftaftertoctitleskip}{-10in} % make TOC title closer to top of TOC content
+
+\renewcommand{\cftdotsep}{1} % adjust dot spacing
+
+% part adjustments
+\renewcommand{\cftpartfont}{\normalsize\normalfont}       % make TOC part font normal size
+\renewcommand{\cftpartpagefont}{\normalfont} % make TOC part page number font normal
+\renewcommand{\cftpartleader}{\cftdotfill{\cftdotsep}} % sets dot spacing
+\renewcommand{\cftbeforepartskip}{.05in} % reduce space before parts (including before TOC heading)
+
+% chapter adjustments
+\titlecontents{chapter}%
+	[0pt]%
+	{\normalfont}%
+	{\chaptername\ \thecontentslabel:\quad}%
+	{} % before chapter heading
+	{\normalfont\cftdotfill{\cftdotsep}\contentspage} % after chapter heading
+
+\tableofcontents

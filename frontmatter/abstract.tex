@@ -1,0 +1,52 @@
+% abstract
+
+\newgeometry{top=2.5in, right=1in, bottom=1in, left=1.5in}
+\thispagestyle{empty} % remove page numbers
+\pdfbookmark[0]{Abstract}{abstract}
+
+% signature and date function
+\newcommand*{\SignatureAndDate}[2]{%
+	\par\hfill\noindent\makebox[2.5in]{#1}
+	\vspace{-0.15in}
+	\par\hfill\noindent\makebox[2.5in]{\hrulefill}
+	\par\hfill\makebox[2.5in][c]{}
+	\vspace{0.05in}
+	\par\hfill\noindent\makebox[2.5in]{#2}
+	\vspace{-0.15in}
+	\par\hfill\noindent\makebox[2.5in]{\hrulefill}
+	\vspace{-0.05in}
+	\par\hfill\noindent\makebox[2.5in][c]{Date}
+}%
+
+\begin{center}
+	ABSTRACT OF DISSERTATION\\
+	\vspace{0.5in}
+	% insert title
+	\makeatletter
+	\@title
+	\makeatother
+\end{center}
+
+Cardiac magnetic resonance (CMR) can non-invasively assess heart function. Displacement encoding with stimulated echoes (DENSE) is an advanced CMR imaging technique that measures tissue displacement and can be used to quantify cardiac mechanics (e.g. strain and torsion). When combined with clinical risk factors, cardiac mechanics have been shown to be better predictors of mortality than traditional measures of function.
+End-expiratory breath-holds are typically used to minimize respiratory motion artifacts. Unfortunately, requiring subjects to breath-hold introduces limitations with the duration of image acquisition and quality of data acquired, especially in patients with limited breath-holding ability. Thus, DENSE acquisitions often require respiratory navigator gating, which works by measuring the diaphragm during normal breathing and only acquiring data when the diaphragm is within a pre-defined acceptance window.\\
+
+Unfortunately, navigator gating results in long scan durations due to inconsistent breathing patterns. Moreover, the respiratory navigator configuration directly affects image quality. Scan duration and image quality need to be optimized in order to improve the clinical utility of DENSE. Thus, the goal of this project was to optimize those parameters. To accomplish this goal, we set out to 1) understand how respiratory gating affects measures of cardiac mechanics, 2) determine the optimal respiratory navigator configuration, and 3) reduce scan duration by using an interactive videogame.\\
+
+Aim 1 of this project demonstrated that the variability in torsion, but not strain, could be significantly reduced through the use of a respiratory navigator compared to traditional breath-holds. Aim 2 of this project demonstrated that, among the configuration options, the dual-navigator configuration resulted in the best image quality compared to “gold standard” traditional breath-holds, but also resulted in the longest scan duration. Aim 3 demonstrated that using an interactive breathing-controlled videogame during CMR can significantly reduce scan duration compared to traditional free-breathing.
+
+% page 2
+\restoregeometry
+\thispagestyle{empty} % remove page numbers
+
+In summary, respiratory navigator gating with DENSE 1) reduces the variability in measured LV torsion, 2) results in the best image quality with the dual-navigator configuration, 3) results in significantly shorter scan durations through the use of an interactive videogame. Selecting the optimal navigator configuration and using an interactive videogame can improve the clinical utility of DENSE.\\
+
+\vspace{0.25in}
+\noindent KEYWORDS: Respiratory Navigator Gating, Cardiac Magnetic Resonance Imaging, Displacement Encoding with Stimulated Echoes, Cardiac Mechanics, Interactive Videogame
+
+\vspace{5.03125in}        % Distance from KEYWORDS section to Author's Signature text
+						  % Adjust accordingly as abstract gets longer to make 2in from bottom of page
+					
+\SignatureAndDate{Sean Michael Hamlet}{Today's Date}
+
+
+

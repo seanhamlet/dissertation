@@ -1,0 +1,96 @@
+\documentclass[12pt, letterpaper]{report}
+
+\usepackage[top=1in, right=1in, bottom=1in, left=1.5in]{geometry} % allows adjustment of margins
+\usepackage{setspace} % allows doublespacing with the \doublespacing command
+\usepackage{tocloft} % modify table of contents
+\usepackage[hidelinks, linkcolor=black, urlcolor=black, bookmarksopen=true, pdftitle="Sean Hamlet's Thesis", pdfauthor="Sean Michael Hamlet"]{hyperref}
+\usepackage{bookmark}
+\usepackage{titlesec} % edit formatting of headings
+\usepackage{titletoc} % edit formatting of table of contents
+\usepackage{graphicx} % insert figure graphics
+\usepackage[labelfont=bf]{caption} % makes Figure x.x bold
+\usepackage{booktabs} % for tables
+\usepackage{multirow} % for tables
+\usepackage[titletoc, toc, page]{appendix}
+\usepackage{rotating} % for rotating the table
+\usepackage{lipsum}
+
+% setup pdf bookmark level
+\bookmarksetup{level=part}
+
+% remove word hyphenation throughout document
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+% chapter heading formatting
+\titleformat{\chapter}[display]
+	{\bfseries \centering}
+	{\MakeUppercase{\chaptertitlename} \thechapter}
+	{0.35in}
+	{\uppercase}
+\titlespacing{\chapter}{0pt}{-0.35in}{0.15in} % remove default padding above chapter heading
+
+% section heading formatting
+\titleformat{\section}[block]
+	{\bfseries}
+	{\thesection}
+	{0.5em}
+	{}
+\titlespacing{\section}{0pt}{0.1in}{0.1in} % remove default padding above chapter heading
+
+% section heading formatting
+\titleformat{\subsection}[block]
+	{\em}
+	{\thesubsection}
+	{0.5em}
+	{}
+\titlespacing{\subsection}{0pt}{0.1in}{0.1in} % remove default padding above chapter heading
+
+\title{\uppercase{Properties and optimization of respiratory navigator gating for spiral cine DENSE cardiac MRI}}
+\author{Sean M Hamlet}
+
+
+\begin{document}
+
+% front matter
+\include{frontmatter/titlepage}
+\include{frontmatter/abstract}
+\include{frontmatter/approval}
+\include{frontmatter/dedication}
+
+\doublespacing
+
+\pagenumbering{roman}
+\include{frontmatter/acknowledgments}
+
+\include{frontmatter/contents}
+
+\newpage		% make sure bookmark links to correct page
+\phantomsection % make sure bookmark links to correct page
+\include{frontmatter/list_tables}
+
+\newpage		% make sure bookmark links to correct page
+\phantomsection % make sure bookmark links to correct page
+\include{frontmatter/list_figures}
+
+% main content
+\bookmarksetup{startatroot}
+
+\pagenumbering{arabic}
+
+\include{chapter1}
+\include{chapter2}
+\include{chapter3}
+\include{chapter4}
+\include{chapter5}
+
+\include{appendix}
+
+\singlespacing
+\bibliographystyle{refs/dissertationstyle}
+\bibliography{refs/Dissertation}
+
+\end{document}          
+
