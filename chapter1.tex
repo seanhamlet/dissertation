@@ -1,33 +1,46 @@
 \chapter{Background}
 
 \section{Heart Disease}
-\lipsum[1]
+	Heart disease is the leading cause of death for both adult men and women [cite CDC]. Moreover, congenital heart disease (CHD), heart defects that can be present at birth, is a growing problem that affects over 2 million people in the US [cite grant]. As surgical and treatment techniques have improved, children with CHD are living to adulthood. In order to develop improved techniques for treatment and therapy, heart disease and cardiac function need to be accurately monitored.
 
 \section{Standard Cardiac Magnetic Resonance Imaging (MRI) and Traditional Measures of Cardiac Function}
-Magnetic resonance imaging (MRI) is a non-invasive non-ionizing medical imaging technique that is used to assess the function and health of internal structures of the human body. MRI involves the use of strong magnetic fields and radio waves along with the natural hydrogen nuclei, which are abundant in human tissue, to generate images. MRI can be used to non-invasively assess the cardiac function and health. Generating images of the heart is similar to MRI except for a few changes due to the continuous movement of the heart itself, such as electrocardiogram or ECG gating.
+	Magnetic resonance imaging (MRI) is a non-invasive non-ionizing medical imaging technique that is used to assess the function and health of internal structures of the human body. MRI involves the use of strong magnetic fields and radio waves along with the natural hydrogen nuclei, which are abundant in human tissue, to generate images. Thus, MRI can be used to non-invasively assess the cardiac function and health.
 
-Non-invasive imaging has become standard protocol in the diagnosis and management of heart diseases, such as CHD [cite]. Traditional measures of cardiac function, such as ventricular volumes and mass or ejection fraction, can be derived from standard cardiac MRI. Whole heart function is typically assessed with these traditional metrics, but unfortunately, they may not contain enough information to explain the complex nature of some heart diseases. Moreover, there is a growing body of evidence that suggests that, when combined with clinical risk factors (e.g. hypertension), advanced measures of cardiac mechanics (e.g. cardiac strains and torsion) are better predictors of mortality compared to traditional measures \cite{Stanton2009}.
+	Non-invasive imaging forms has become standard protocol for diagnosis, prognosis, and management of heart diseases, such as CHD [cite], and for monitoring cardiac health. Traditional measures of cardiac function, such as ventricular volumes, ventricular mass, and ejection fraction, can be derived from standard cardiac MRI. Whole heart function is typically assessed with these traditional metrics, but unfortunately, they may not contain enough information to explain the complex nature of some heart diseases. Moreover, there is a growing body of evidence that suggests that, when combined with clinical risk factors (e.g. hypertension), advanced measures of cardiac mechanics (e.g. cardiac strains and torsion) are better predictors of mortality compared to traditional measures \cite{Stanton2009}.
 
-- put stanton figure in introduction
+	\begin{figure}
+		\centering
+		\includegraphics{figures/intro/Stanton}
+		\caption[Measuring cardiac strains dramatically improves the ability to predict mortality]{\textbf{Measuring cardiac strains dramatically improves the ability to predict mortality.}}
+		\label{fig:stanton}
+	\end{figure}
 
-\section{Advanced Measures of Function Cardiac Mechanics}
- - explain what they are., explain why they are important, explain that DENSE can be used to acquire the data to derive them
+\section{Advanced Measures of Function: Cardiac Mechanics}
+ 	Cardiac mechanics, such as strain and torsion, measure the deformation of the heart as it contracts and relaxes throughout the cardiac cycle. Cardiac strains can be measured in many directions but are commonly measured circumferentially, radially, and longitudinally (Figure XX). Torsion measures the twisting motion of the heart along the longitudinal axis of the heart during the cardiac cycle. Cardiac mechanics are quantified from analyzing the motion of small regions of the heart [cite]. Cardiac MRI can be used to quantify cardiac mechanics using spiral cine Displacement ENcoding with Stimulated Echoes (DENSE).
 
 \section{Displacement Encoded Cardiac MRI}
-Spiral cine Displacement ENcoding with Stimulated Echoes (DENSE) is an advanced cardiac magnetic resonance imaging technique that directly encodes the displacement of the myocardial tissue into the phase of the MR signal [cite]. Because of its quantitative nature, as opposed to qualitative, such as in standard cardiac MRI, it allows for simple quantification of cardiac mechanics. In addition, DENSE has good spatial resolution and good reproducibility [cite].
+	Spiral cine Displacement ENcoding with Stimulated Echoes (DENSE) is an advanced cardiac magnetic resonance imaging technique that directly encodes the displacement of the myocardial tissue into the phase of the MR signal [cite]. Because of its quantitative nature, as opposed to qualitative, such as in standard cardiac MRI, it allows for simple and accurate quantification of cardiac mechanics. In addition, DENSE has good spatial resolution and good reproducibility [cite].
 
 \section{Respiratory Motion and Blurring}
--images are typically acquired using breath-holds
--without breath-holds, blurring occurs
--dense requires a lot of data that cannot be acquired during a single breath-hold
--in order to derive complext information or to acquire large amounts of data, respiratory navigator gating is required
+	As with most cardiac MRI techniques, images are typically acquired using end-expiratory breath-holds. Breath-holds are used to suspend respiration so the bulk motion of the heart is minimized during imaging. Respiratory compensation is  in order to reduce motion blurring in images (Figure XX). DENSE acquisitions are generally performed using end-expiratory breathholds (~15–20 s in duration) [cite 4–10]; however, this approach is constrained by the patient’s ability to breath- hold, which is limited in young subjects and many stages of advanced heart disease. Furthermore, short acquisitions preclude the ability to capture more robust data, such as three- dimensional (3D)DENSE,7,11,12 or high resolution imaging.13. In order to overcome this time limitation, a respiratory navigator has been used which allows the subject to breathe freely throughout image acquisition [cite].
 
 \section{Respiratory Navigator Gating}
-- respiratory navigator gating works by...it's good because you can get a lot of data within a scan, but the issue is it takes too long. Moreover, it is unknown how it affects the measures of cardiac mechanics.
+	Respiratory navigator gating works by measuring the diaphragm position during normal breathing and only acquiring data when the diaphragm is within a pre-defined acceptance window (Figure XX). The trade-off of navigator gating is significantly increased scan duration because of poor navigator efficiency. For example, previous CMR studies have reported respiratory navigator efficiencies of 20 to 45\% in adults [4–7]. This poor navigator efficiency lengthens the duration of currently used clinical imaging and limits clinical feasibility of emerging advanced imaging techniques.
+	
+	Noe talk about how this time limitation can be fixed
+	
+	Navigator efficiency is typically poor because breathing patterns can be erratic [8–10] and the patient is gener- ally unaware of the desired acceptance window location. Providing the patient with visual feedback of the dia- phragm position during CMR (“navigator feedback”)has been shown to improve breathing consistency and scan efficiency in adults [5, 8]. For example, studies have shown efficiency improvements up to 29 % (absolute) compared to traditional acquisitions without feedback [5, 6]. Importantly, these previous studies have demon- strated that image quality from navigator feedback acquisitions is similar to acquisitions without feedback [5, 6]. The potential to achieve similar benefits using navigator feedback with pediatric participants has not been explored. Given the challenge of keeping these par- ticipants still and motionless for long periods of time, this improved efficiency could have substantial clinical benefit
+	
+	Moreover, there are different navigator configurations possible, which all affect navigator efficiency and image quality due to their distinct advantages and disadvantages.
+	
+	Previous studies using navigator-gated DENSE have
+	reported using a prospective single navigator configura- tion.7,12 However, there has been no formal comparison of the available navigator configurations. Moreover, the accuracy of derived cardiac mechanics and overall image quality for these navigator configurations compared with breathhold acquisitions as a reference standard are largely unknown. The purpose of this study was to determine the optimal configura- tion of respiratory navigator gating for the quantification of left ventricular strain using spiral cine DENSE MRI
 
 \section{Dissertation Outline}
-\lipsum[6]
 
-\index In Chapters 2 and 3, we address the effects of inconsistent end-expiratory diaphragm position between breath-holds and respiratory navigator gating on DENSE-derived cardiac mechanics, such as left ventricular strain and torsion. In Chapter 2, we learn that cardiac strain is insensitive to normal changes in end-expiratory position between breath-hold DENSE acquisitions. In Chapter 3, we discover that use of a respiratory navigator has the ability to significantly reduce the variability of cardiac torsion and thus the sample size needed to detect small changes in torsion. The conclusions of the studies performed for Chapters 2 and 3 demonstrate the importance of employing a respiratory navigator or some form of consistent respiratory compensation for future studies.
+The goal of this project was to optimize respiratory navigator gating, which would improve the clinical utility of DENSE. To accomplish this goal, we set out to 1) understand how respiratory gating affects measures of cardiac mechanics, 2) determine the optimal respiratory navigator configuration, and 3) improve navigator efficiency, which reduces scan duration, by using an interactive breathing-controlled videogame during cardiac MRI.
 
-\index In Chapter 4, we address the 
+\indent In Chapters 2 and 3, we address the effects of inconsistent end-expiratory diaphragm position between breath-holds and respiratory navigator gating on DENSE-derived cardiac mechanics, such as left ventricular strain and torsion. In Chapter 2, we learn that cardiac strain is insensitive to normal changes in end-expiratory position between breath-hold DENSE acquisitions. In Chapter 3, we discover that use of a respiratory navigator has the ability to significantly reduce the variability of cardiac torsion and thus the sample size needed to detect small changes in torsion. The conclusions of the studies performed for Chapters 2 and 3 demonstrate the importance of employing a respiratory navigator or some form of consistent respiratory compensation for future studies.
+
+\indent In Chapter 4, we address the optimal navigator configuration.
+
