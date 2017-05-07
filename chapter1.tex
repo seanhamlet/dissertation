@@ -27,39 +27,19 @@
 	Spiral cine DENSE is an advanced cardiac magnetic resonance imaging technique that directly encodes the displacement of the myocardial tissue into the phase of the MR signal \cite{Aletras1999b}. Because of its quantitative nature, as opposed to qualitative such as in standard cardiac MRI, DENSE allows for simple and accurate quantification of cardiac mechanics. In addition, DENSE has good spatial resolution and good reproducibility \cite{Haggerty2013,Wehner2015a}. Moreover, DENSE has been used to quantify cardiac mechanics in both healthy and diseased animals and humans \cite{Aletras1999b,Aletras1999c,Kim2004,Ernande2012,Haggerty2013}
 
 \section{Respiratory Motion and Blurring}
-	Due to the heart's position resting on the diaphragm, breathing during CMR acquisition will result in respiratory image artifacts \cite{Axel1986}, which make images blurry and unusable (Figure~\ref{fig:good_bad_image_breathing_artifacts}). Thus, cardiac MR images are typically acquired using end-expiratory breath-holds, which are used to suspend respiration so the bulk motion of the heart is minimized during imaging.
+	Due to the heart's position resting on the diaphragm, breathing during CMR acquisition will result in respiratory image artifacts \cite{Axel1986}, which make images blurry and unusable (Figure~\ref{fig:good_bad_image_breathing_artifacts}). Thus, cardiac MR images are typically acquired using end-expiratory breath-holds, which are used to suspend respiration so the bulk motion of the heart is minimized during imaging. DENSE acquisitions are typically performed using end-expiratory breath-holds that are $\sim$15--20 s in duration \cite{Kim2004,Zhong2006a,Ernande2012,Zhong2010a,Aletras2005,Spottiswoode2007,Young2012c}. However, this method's success depends upon the patient's ability to breath-hold, which is limited in young subjects and many stages of advanced heart disease.
 	
-	Unfortunately, it is difficult to achieve a consistent diaphragm position between successive breath-holds and variations of 4--13 mm are normal \cite{Liu1993,Wang1995a,Taylor1997a,Holland1998c,Fischer2006a}. Inconsistent breath-holds can impact the position of the heart with respect to the imaging plane (Figure XX). Peak strains vary along the longitudinal axis of the heart \cite{Kuijer2002,Moore2000,Young1994a,Feng2009,NasiraeiMoghaddam2010,Donekal2013a,Suever2017} and torsion is computed typically computed from two images acquired during \textit{separate} end-expiratory breath-holds. In both cases, quantification is performed assuming images were acquired at the same diaphragm position. Thus, we expect that translation of the heart with respect to the imaging plane (due to inconsistent end-expiratory positions) to result in variability in measured strains and torsion. Since a respiratory navigator restricts data acquisition to when the diaphragm is within a fixed, narrow acceptance window, we hypothesize that using a respiratory navigator
+\section{Inconsistent Breath-holds}
+	Unfortunately, patients typically struggle to achieve a consistent diaphragm position between successive breath-holds and variations of 4--13 mm are normal \cite{Liu1993,Wang1995a,Taylor1997a,Holland1998c,Fischer2006a}. Inconsistent breath-holds can impact the position of the heart with respect to the imaging plane (Figure~\ref{fig:range_of_diaphragm_position_breathing}). Peak strains vary along the longitudinal axis of the heart \cite{Kuijer2002,Moore2000,Young1994a,Feng2009,NasiraeiMoghaddam2010,Donekal2013a,Suever2017} and torsion is computed typically computed from two images acquired during \textit{separate} end-expiratory breath-holds \cite{Donekal2013a}. In both cases, quantification is performed assuming images were acquired at the same, consistent diaphragm position. Thus, we expect that translation of the heart with respect to the imaging plane (due to inconsistent end-expiratory positions) to result in differences and/or variability in measured strains and torsion. \textit{We hypothesized that this variability could be reduced by using a respiratory navigator to improve the consistency of the diaphragm position between breath-holds.}
 	
-	Problems with End-expiratory breath-holds
-	- peple suck holding their breath at the same spot,
-	- this is a problem because heart strian varies and so it could vary more due to that
-	- we can solve this by using a respiratory navigator
-		- which works by resticturing data acquisition to a narrow acceptance window
-	- this could lead to improvement in reproducbility of strains
+	\begin{figure}
+		\centering
+		\includegraphics{figures/intro/range_of_diaphragm_position_breathing}
+		\caption[During respiration, diaphragm motion causes the heart to translate a significant distance while the imaging plane remains fixed]{\textbf{During respiration, diaphragm motion causes the heart to translate a significant distance while the imaging plane remains fixed.}}
+		\label{fig:range_of_diaphragm_position_breathing}
+	\end{figure}
 	
-	- respiratory navigator gating is great, but has different configurations, which could affect image quality and scan duration
-	- required to know in order to produce the best image quaoity and consistent parameters
-	
-	
-	- in addition to people sucking to hold their breath consistnely, due to the duration of dense breath-holds, 15-20 seconds, people struggle to complete a single image scan.
-	- a respiraotry navgiator helps with this by allowing free-breathing 
-	- unfortunately, leads to poor navigator efficiency, especially in children with erratic breathing patterns
-	- feedback has been used in adults and is effective
-	- need to understand how feedback
-	
-	Unfortuantely, people struggle to hold their breathe consistently, and because strains vary along the longitudinal axis of the heart, and torsion is constructed from 2 images (assuming those images come from the same plane), inconsitent breath-hold positions could result in varying strains and torsion.
-	
-	A way to overcome this is by using a respiratory navigator.
-	
-	1. people struggle to hold breath
-	2. since strain varies across the heart, can lead to varying levels of strains and torsion.
-	3. a respiratory navigator can be used to restrict data acquisition to a small window, and thus ensure a consistne position of breath-hold during image acquisition.
-	
-	
-	DENSE acquisitions are typically performed using end-expiratory breath-holds that are $\sim$15--20 s in duration \cite{Kim2004,Zhong2006a,Ernande2012,Zhong2010a,Aletras2005,Spottiswoode2007,Young2012c}. However, this method's success depends upon the patient's ability to breath-hold, which is limited in young subjects and many stages of advanced heart disease. Also, due to their time limitation on the amount of data acquired, short acquisitions limit the ability to acquire more robust data, such as high-resolution \cite{Wehner2014} or three-dimensional (3D) DENSE imaging \cite{Zhong2010a,Kar2014,Auger2012}. In order to overcome this time limitation, a respiratory navigator has been used which allows the subject to breathe freely throughout image acquisition.
-	
-	 \begin{figure}
+	\begin{figure}
 		\centering
 		\includegraphics{figures/intro/good_bad_image_breathing_artifacts}
 		\caption[High-quality image vs image with breathing artifacts that results in unusable data]{\textbf{High-quality image vs image with breathing artifacts that results in unusable data.}}
@@ -67,15 +47,12 @@
 	\end{figure}
 
 \section{Respiratory Navigator Gating}
-	Respiratory navigator gating works by measuring the diaphragm position during normal breathing and only acquiring data when the diaphragm is within a pre-defined acceptance window (Figure~\ref{fig:navigator_gating_explanation}). Unfortunately, due to poor navigator efficiency, respiratory navigator gating results in significantly increased scan duration. For example, previous CMR studies have reported respiratory navigator efficiencies of 20 to 45\% in adults [4–7] \cite{Abd-Elmoniem2011,Feuerlein2009,Jhooti2011,Wang1996}. This poor navigator efficiency lengthens the duration of currently used clinical imaging and limits clinical feasibility of emerging advanced imaging techniques.
+	Respiratory navigator gating works by measuring the diaphragm position during normal breathing and only acquiring data when the diaphragm is within a pre-defined acceptance window (Figure~\ref{fig:navigator_gating_explanation}). Respiratory navigation is also used to overcome the limitations of short acquisitions (end-expiratory breath-holds), which limit the ability to acquire more robust data, such as high-resolution \cite{Wehner2014} or three-dimensional (3D) DENSE imaging \cite{Zhong2010a,Kar2014,Auger2012}. However, unlike other cardiac imaging techniques, the navigator echo in the DENSE sequence cannot occur at the beginning of the cardiac cycle as it would interfere with the displacement encoding. Instead, the navigator echo occurs immediately after data acquisition, at the end of the cardiac cycle, which creates several configurations as to how the navigator can be used to either accept or reject acquired DENSE data (prospective, retrospective, and dual). Previous studies have reported using prospective single navigator configuration \cite{Zhong2010a,Auger2012}. Each configuration has distinct advantages and disadvantages that can directly affect image quality and scan duration, but no formal comparison of the configurations has been performed. Moreover, the accuracy of derived cardiac mechanics and overall image quality for these navigator configurations compared with breath-hold acquisitions as a reference standard are largely unknown. \textit{Therefore, another goal of this study was to determine the optimal navigator configuration compared to breath-holds as a reference standard.}
+	
+\section{Navigator Efficiency}
+	Navigator efficiency is defined as the total duration while the diaphragm is within the acceptance window versus the total scan duration. Unfortunately, due to poor navigator efficiency, respiratory navigator gating results in significantly increased scan duration. For example, previous CMR studies have reported respiratory navigator efficiencies of 20 to 45\% in adults [4–7] \cite{Abd-Elmoniem2011,Feuerlein2009,Jhooti2011,Wang1996}. This poor navigator efficiency lengthens the duration of currently used clinical imaging and limits clinical feasibility of emerging advanced imaging techniques.
 	
 	Navigator efficiency is typically poor because breathing patterns can be inconsistent \cite{Liu1993,Wang1995a,Taylor1997a}, as commonly seen in children, and the patient is generally unaware of the desired acceptance window location. The use of visual feedback of the diaphragm position during CMR has been shown to improve breathing consistency and efficiency in adults up to 29\% compared to traditional acquisitions without feedback \cite{Feuerlein2009,Jhooti2011}. Therefore, it's important to investigate whether similar benefits can be achieved using visual feedback with pediatric participants, which could have substantial clinical benefit. \textit{We hypothesized that engaging pediatric participants with a navigator controlled videogame to help control breathing patterns would improve navigator efficiency.}
-	
-	In addition to solving the time limitations of respiratory navigator gating, is unknown how respiratory navigator gating affects the important measures of cardiac mechanics. For example, patients typically struggle to hold their breath consistently between image acquisitions (with typical differences of up to 13mm [cite]). Therefore, we hypothesized that using a respiratory navigator can improve the reproducibility of cardiac mechanics by improving the consistency of the position of the diarphragm during and bteween breath-held acqisitions.
-	
-	Lastly, there are different navigator configuration options (prospective, retrospective, and dual), all of which affect navigator efficiency and image quality due to their distinct advantages and disadvantages. For example, previous studies using navigator-gated DENSE have reported using a prospective single navigator configuration.7,12 However, there has been no formal comparison of the available navigator configurations. More importantly, the accuracy of derived cardiac mechanics and overall image quality for these navigator configurations compared with breath-hold acquisitions as a reference standard are largely unknown.
-	
-	The purpose of this study was to determine the optimal configuration of respiratory navigator gating for the quantification of left ventricular strain using spiral cine DENSE MRI
 	
 	\begin{figure}
 		\centering
@@ -85,13 +62,13 @@
 	\end{figure}
 
 \section{Dissertation Outline}
-	The goal of this project was to optimize respiratory navigator gating, which would improve the clinical utility of DENSE. To accomplish this goal, we set out to 1) understand how respiratory navigator gating affects the reproducibility of measures of cardiac mechanics, 2) determine the optimal respiratory navigator configuration, and 3) improve navigator efficiency, which reduces scan duration, by using an interactive breathing-controlled videogame during cardiac MRI.
+	The overall goal of this project was to optimize respiratory navigator gating, which would improve the clinical utility of DENSE. To accomplish this goal, we set out to 1) understand how respiratory navigator gating affects the reproducibility of measures of cardiac mechanics, 2) determine the optimal respiratory navigator configuration, and 3) improve navigator efficiency, which reduces scan duration, by using an interactive breathing-controlled videogame during cardiac MRI.
 	
-	\indent In Chapters 2 and 3, we address the effects of inconsistent end-expiratory diaphragm position between breath-holds and respiratory navigator gating on DENSE-derived cardiac mechanics, such as left ventricular strain and torsion. In Chapter 2, we learn that cardiac strain is insensitive to normal changes in end-expiratory position between breath-hold DENSE acquisitions. In Chapter 3, we discover that use of a respiratory navigator has the ability to significantly reduce the variability of cardiac torsion and thus the sample size needed to detect small changes in torsion. The conclusions of the studies performed for Chapters 2 and 3 demonstrate the importance of employing a respiratory navigator or some form of consistent respiratory compensation for future studies.
+	\indent In Chapters 2 and 3, we address the effects of inconsistent end-expiratory diaphragm position between breath-holds and respiratory navigator gating on DENSE-derived cardiac mechanics, such as left ventricular strain and torsion. In Chapter 2, we learn that cardiac strain is insensitive to normal changes in end-expiratory position between breath-hold DENSE acquisitions. In Chapter 3, we discover that use of a respiratory navigator has the ability to significantly reduce the variability of cardiac torsion and thus the sample size needed to detect small changes in torsion. The conclusions of the studies performed for Chapters 2 and 3 discuss the importance of employing a respiratory navigator or some form of consistent respiratory compensation for future studies.
 	
-	\indent In Chapter 4, we determine the optimal navigator configuration compared to the breath-hold "gold-standard".
+	\indent In Chapter 4, we determine the optimal navigator configuration compared to the breath-hold "gold-standard". Importantly, we learn that although strains were consistent between different navigator configurations and breath-holds. However, in terms of image quality, the dual navigator configuration was no different than breath-holds in adults and resulted in the best image quality in children. Unfortunately, the high image quality resulted in a trade off with navigator efficiency, which was the poorest for the dual navigator configuration compared to the other navigator configurations. The conclusion of chapter 4 discusses that some form of respiratory navigator feedback may be helpful in improving the poor navigator efficiency of the dual navigator.
 	
-	\indent In Chapter 5, we developed and tested an interactive breathing-controlled videogame. Fifty children participated in using the videogame during navigator-gated DENSE cardiac MRI. Analysis was performed to assess the videogame's effects on navigator efficiency, heart rate, and derived strain compared to normal free-breathing. We discovered that using the videogame during navigator-gated cardiac MRI resulted in a significant (>XX\%) increase in navigator efficiency.
+	\indent In Chapter 5, we developed and tested an interactive breathing-controlled videogame to improve navigator efficiency. Fifty children participated in using the videogame during navigator-gated DENSE cardiac MRI. Analysis was performed to assess the videogame's effects on navigator efficiency, heart rate, and derived strain compared to normal free-breathing. We discovered that using the videogame during navigator-gated cardiac MRI resulted in a significant improvement in navigator efficiency. The conclusion of this chapter discusses that this form of navigator efficiency improvement should be generalizable to all cardiac MRI that employ a respiratory navigator.
 	
 	\indent In Chapter 6, we discuss a summary of the results of all these studies, their clinical implications, and future directions.
 
