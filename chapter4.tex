@@ -47,7 +47,7 @@
 \subsection{DENSE Post-Processing}
 	All DENSE images were analyzed using custom, open-source MATLAB (The Mathworks Inc, Natick, MA) software, \textit{DENSEanalysis} \cite{Gilliam2016a}. For each set of DENSE images, endocardial and epicardial boundaries were drawn on the magnitude image from an end-diastolic and end-systolic frame. A simplified analysis technique was used to reconstruct the motion field \cite{Suever2014}. The displacement-encoded phase images were unwrapped using a path-following algorithm with manual selection of seed points. The resulting Lagrangian displacements underwent spatial smoothing and temporal fitting as previously described \cite{Spottiswoode2007}.
 	
-	Segmental two-dimensional Lagrangian strains were computed over the cardiac cycle for 6 segments in the short-axis images (radial and circumferential strain) and from the long-axis images (longitudinal strain). Cardiac segments were defined using the American Heart Association 17-segment model. Average peak strains were computed by averaging the strain curves of all the myocardial segments together and finding the peak of this average strain curve. When computing peak longitudinal strain, pixels within 10\% of left ventricular longitudinal length from the most basal and apical regions were excluded in order to exclude the increased noise which is typically observed in the strain curves in those regions. Thickening was defined by convention as positive strain, whereas shortening was defined as negative.
+	Segmental two-dimensional Lagrangian strains were computed over the cardiac cycle for 6 segments in the short-axis images (radial and circumferential strain) and from the long-axis images (longitudinal strain). Cardiac segments were defined using the American Heart Association 17-segment model. For segmental strain, peak strain was computed for each segment and reported using mean and standard deviation of all segments. Average peak strains were computed by averaging the strain curves of all the myocardial segments together and finding the peak of this average strain curve. When computing peak longitudinal strain, pixels within 10\% of left ventricular longitudinal length from the most basal and apical regions were excluded in order to exclude the increased noise which is typically observed in the strain curves in those regions. Thickening was defined by convention as positive strain, whereas shortening was defined as negative.
 
 \subsection{Analysis}
 	Mean modified coefficient of variation (CoV) \cite{Wehner2015a,Haggerty2013,Wehner2015} was used to measure agreement in strain between different navigator configurations and breath-holds. The calculation of the CoV is shown below where $N$ is the number of subjects and $x_1$ and $x_2$ are the strain measurements.
@@ -80,69 +80,119 @@
 	Ten healthy adults (Age: 23 $\pm$ 3 years, 40\% female) and 20 healthy children (Age: 13 $\pm$ 3 years, 45\% female) were enrolled in the study. DENSE data were successfully acquired in all subjects except for one child who could not complete the study protocol due to an erratic respiratory pattern.
 
 \subsection{Average Peak Strains}
-	Average peak left ventricular strains are shown in Table~\ref{table:navigator_strains}. There were no significant mean differences in circumferential, radial, and longitudinal strain between the dual, retrospective, and prospective navigator configurations and breath-holds in adults (Figure~\ref{fig:nav_strain_bland_altman}). Compared to breath-holds, all navigator configurations had a CoV of less than 20\% for circumferential, radial, and longitudinal strain in adults (Figure~\ref{fig:nav_strain_bland_altman}). The differences in strain are listed as confidence intervals in Table~\ref{table:nav_CI_strains}. Peak segmental left ventricular strains are shown in Table~\ref{table:navigator_segmental_strains} in Appendix A). There were no significant differences in segmental strain between the navigator configurations and breath-holds except for radial strain from the prospective configuration (p = 0.002, Table~\ref{table:nav_CI_seg_strains}). Compared to breath-holds, all navigator configurations had CoVs of less than 20\% except for radial segmental strain (19-28\%) (Table~\ref{table:nav_CI_seg_strains}).
+	Average peak left ventricular strains are shown in Table~\ref{table:navigator_strains}. There were no significant mean differences in circumferential, radial, and longitudinal strain between the dual, retrospective, and prospective navigator configurations and breath-holds in adults (Figure~\ref{fig:nav_strain_bland_altman}). Compared to breath-holds, all navigator configurations had a CoV of less than 20\% for circumferential, radial, and longitudinal strain in adults (Figure~\ref{fig:nav_strain_bland_altman}). The differences in strain are listed as confidence intervals in Table~\ref{table:nav_CI_strains}. Peak segmental left ventricular strains are shown in Table~\ref{table:navigator_segmental_strains}). There were no significant differences in segmental strain between the navigator configurations and breath-holds except for radial strain from the prospective configuration (p = 0.002, Table~\ref{table:nav_CI_seg_strains}). Compared to breath-holds, all navigator configurations had CoVs of less than 20\% except for radial segmental strain (19-28\%) (Table~\ref{table:nav_CI_seg_strains}).
 
-%Table 4.1
-\begin{table}
-	\centering
-	\caption[Average strains for different acquisition techniques]{\textbf{Average strains for different acquisition techniques.}}
-	\label{table:navigator_strains}
-	\begin{tabular}{c  c  c}
-		\toprule
-		\multicolumn{1}{c}{}       			 & \multicolumn{2}{c}{\textbf{Mean $\pm$ Std. Dev.}} \\ 
-		\multicolumn{1}{c}{}				 & \multicolumn{1}{c}{\textbf{Adults}} 			& \multicolumn{1}{c}{\textbf{Children}} \\ \midrule
-		\multicolumn{1}{l}{\textbf{Circumferential Strain (\%)}}                       		& \multicolumn{2}{c}{} \\
-		\multicolumn{1}{r}{Breath-hold}      & \multicolumn{1}{c}{-17 $\pm$ 2}              & \multicolumn{1}{c}{--}          			\\
-		\multicolumn{1}{r}{Retrospective}    & \multicolumn{1}{c}{-18 $\pm$ 2}              & \multicolumn{1}{c}{-19 $\pm$ 2}           \\
-		\multicolumn{1}{r}{Prospective}      & \multicolumn{1}{c}{-17 $\pm$ 3}              & \multicolumn{1}{c}{-18 $\pm$ 2}           \\
-		\multicolumn{1}{r}{Dual}    		 & \multicolumn{1}{c}{-18 $\pm$ 3}              & \multicolumn{1}{c}{-20 $\pm$ 2}           \\
-		\multicolumn{1}{l}{\textbf{Radial Strain (\%)}}                       				& \multicolumn{2}{c}{} \\
-		\multicolumn{1}{r}{Breath-hold}      & \multicolumn{1}{c}{30 $\pm$ 10}              & \multicolumn{1}{c}{--}          			\\
-		\multicolumn{1}{r}{Retrospective}    & \multicolumn{1}{c}{26 $\pm$ 9}               & \multicolumn{1}{c}{30 $\pm$ 9}           \\
-		\multicolumn{1}{r}{Prospective}      & \multicolumn{1}{c}{31 $\pm$ 7}               & \multicolumn{1}{c}{26 $\pm$ 12}           \\
-		\multicolumn{1}{r}{Dual}		     & \multicolumn{1}{c}{27 $\pm$ 9}               & \multicolumn{1}{c}{27 $\pm$ 12}           \\
-		\multicolumn{1}{l}{\textbf{Longitudinal Strain (\%)}}                       		& \multicolumn{2}{c}{} \\
-		\multicolumn{1}{r}{Breath-hold}      & \multicolumn{1}{c}{-14 $\pm$ 2}              & \multicolumn{1}{c}{--}          			\\
-		\multicolumn{1}{r}{Retrospective}    & \multicolumn{1}{c}{-14 $\pm$ 2}              & \multicolumn{1}{c}{-14 $\pm$ 2}           \\
-		\multicolumn{1}{r}{Prospective}      & \multicolumn{1}{c}{-13 $\pm$ 2}              & \multicolumn{1}{c}{-14 $\pm$ 2}           \\
-		\multicolumn{1}{r}{Dual}		     & \multicolumn{1}{c}{-14 $\pm$ 2}              & \multicolumn{1}{c}{-14 $\pm$ 2}           \\
-		\bottomrule                                                 
-	\end{tabular}
-\end{table}
-
-% Figure 4.3
-\begin{figure}
-	\centering % center figure
-	\includegraphics{figures/navpaper/Fig3}
-	\caption[Bland-Altman plots of average peak circumferential (Ecc), radial (Err), and longitudinal (Ell) strains for retrospective, prospective, and dual navigator gating vs breath-hold]{\textbf{Bland-Altman plots of average peak circumferential (Ecc), radial (Err), and longitudinal (Ell) strains for retrospective, prospective, and dual navigator gating vs breath-hold.}}
-	\label{fig:nav_strain_bland_altman}
-\end{figure}
-
-%Table 4.2
+	%Table 4.1
 	\begin{table}
-	\centering
-	\caption[CI Results for Differences in Strain Between Navigator Gating and Breathhold DENSE]{\textbf{CI Results for Differences in Strain Between Navigator Gating and Breathhold DENSE.}}
-	\label{table:nav_CI_strains}
-	\begin{tabular}{c c c}
-		\toprule
-		\multicolumn{1}{c}{}&\multicolumn{1}{c}{\textbf{95\% LoA}} & \multicolumn{1}{c}{\textbf{p-value}}\\ \midrule
-		\multicolumn{1}{l}{\textbf{Circumferential Strain (\%)}}   & \multicolumn{2}{c}{}     \\
-		\multicolumn{1}{r}{Retrospective--Breath-hold}  & \multicolumn{1}{c}{[-1.0--1.1]}  & \multicolumn{1}{c}{0.95} \\
-		\multicolumn{1}{r}{Prospective--Breath-hold}    & \multicolumn{1}{c}{[-0.6--2.7]}  & \multicolumn{1}{c}{0.17} \\
-		\multicolumn{1}{r}{Dual--Breath-hold}           & \multicolumn{1}{c}{[-1.6-–0.5]}  & \multicolumn{1}{c}{0.29} \\
-		\multicolumn{1}{l}{\textbf{Radial Strain (\%)}}            & \multicolumn{2}{c}{}     \\
-		\multicolumn{1}{r}{Retrospective--Breath-hold}  & \multicolumn{1}{c}{[-7.4--2.0]}  & \multicolumn{1}{c}{0.23} \\
-		\multicolumn{1}{r}{Prospective--Breath-hold}    & \multicolumn{1}{c}{[-2.8--8.3]}  & \multicolumn{1}{c}{0.29} \\
-		\multicolumn{1}{r}{Dual--Breath-hold}           & \multicolumn{1}{c}{[-8.3–-3.2]}  & \multicolumn{1}{c}{0.34} \\
-		\multicolumn{1}{l}{\textbf{Longitudinal Strain (\%)}}      & \multicolumn{2}{c}{}     \\
-		\multicolumn{1}{r}{Retrospective--Breath-hold}  & \multicolumn{1}{c}{[-1.0–-2.0]}   & \multicolumn{1}{c}{0.85} \\
-		\multicolumn{1}{r}{Prospective--Breath-hold}    & \multicolumn{1}{c}{[-0.3–-2.9]}   & \multicolumn{1}{c}{0.09} \\
-		\multicolumn{1}{r}{Dual--Breath-hold}           & \multicolumn{1}{c}{[-0.8--1.9]}   & \multicolumn{1}{c}{0.38} \\
-		\bottomrule                                 
-	\end{tabular}
-\end{table}
-
-
+		\centering
+		\caption[Average strains for different acquisition techniques]{\textbf{Average strains for different acquisition techniques.}}
+		\label{table:navigator_strains}
+		\begin{tabular}{c  c  c}
+			\toprule
+			\multicolumn{1}{c}{}       			 & \multicolumn{2}{c}{\textbf{Mean $\pm$ Std. Dev.}} \\ 
+			\multicolumn{1}{c}{}				 & \multicolumn{1}{c}{\textbf{Adults}} 			& \multicolumn{1}{c}{\textbf{Children}} \\ \midrule
+			\multicolumn{1}{l}{\textbf{Circumferential Strain (\%)}}                       		& \multicolumn{2}{c}{} \\
+			\multicolumn{1}{r}{Breath-hold}      & \multicolumn{1}{c}{-17 $\pm$ 2}              & \multicolumn{1}{c}{--}          			\\
+			\multicolumn{1}{r}{Retrospective}    & \multicolumn{1}{c}{-18 $\pm$ 2}              & \multicolumn{1}{c}{-19 $\pm$ 2}           \\
+			\multicolumn{1}{r}{Prospective}      & \multicolumn{1}{c}{-17 $\pm$ 3}              & \multicolumn{1}{c}{-18 $\pm$ 2}           \\
+			\multicolumn{1}{r}{Dual}    		 & \multicolumn{1}{c}{-18 $\pm$ 3}              & \multicolumn{1}{c}{-20 $\pm$ 2}           \\
+			\multicolumn{1}{l}{\textbf{Radial Strain (\%)}}                       				& \multicolumn{2}{c}{} \\
+			\multicolumn{1}{r}{Breath-hold}      & \multicolumn{1}{c}{30 $\pm$ 10}              & \multicolumn{1}{c}{--}          			\\
+			\multicolumn{1}{r}{Retrospective}    & \multicolumn{1}{c}{26 $\pm$ 9}               & \multicolumn{1}{c}{30 $\pm$ 9}           \\
+			\multicolumn{1}{r}{Prospective}      & \multicolumn{1}{c}{31 $\pm$ 7}               & \multicolumn{1}{c}{26 $\pm$ 12}           \\
+			\multicolumn{1}{r}{Dual}		     & \multicolumn{1}{c}{27 $\pm$ 9}               & \multicolumn{1}{c}{27 $\pm$ 12}           \\
+			\multicolumn{1}{l}{\textbf{Longitudinal Strain (\%)}}                       		& \multicolumn{2}{c}{} \\
+			\multicolumn{1}{r}{Breath-hold}      & \multicolumn{1}{c}{-14 $\pm$ 2}              & \multicolumn{1}{c}{--}          			\\
+			\multicolumn{1}{r}{Retrospective}    & \multicolumn{1}{c}{-14 $\pm$ 2}              & \multicolumn{1}{c}{-14 $\pm$ 2}           \\
+			\multicolumn{1}{r}{Prospective}      & \multicolumn{1}{c}{-13 $\pm$ 2}              & \multicolumn{1}{c}{-14 $\pm$ 2}           \\
+			\multicolumn{1}{r}{Dual}		     & \multicolumn{1}{c}{-14 $\pm$ 2}              & \multicolumn{1}{c}{-14 $\pm$ 2}           \\
+			\bottomrule                                                 
+		\end{tabular}
+	\end{table}
+	
+	% Figure 4.3
+	\begin{figure}
+		\centering % center figure
+		\includegraphics{figures/navpaper/Fig3}
+		\caption[Bland-Altman plots of average peak circumferential (Ecc), radial (Err), and longitudinal (Ell) strains for retrospective, prospective, and dual navigator gating vs breath-hold]{\textbf{Bland-Altman plots of average peak circumferential (Ecc), radial (Err), and longitudinal (Ell) strains for retrospective, prospective, and dual navigator gating vs breath-hold.}}
+		\label{fig:nav_strain_bland_altman}
+	\end{figure}
+	
+	%Table 4.2
+	\begin{table}
+		\centering
+		\caption[Segmental strain results for navigator gating and breath-holds in adults]{\textbf{Segmental strain results for navigator gating and breath-holds in adults.}}
+		\label{table:navigator_segmental_strains}
+		\begin{tabular}{c  c}
+			\toprule
+			\multicolumn{1}{c}{}       			 & \multicolumn{1}{c}{\textbf{Mean $\pm$ Std. Dev.}} \\ 
+			\multicolumn{1}{l}{\textbf{Circumferential Strain (\%)}} & \multicolumn{1}{c}{}          \\
+			\multicolumn{1}{r}{Breath-hold}      & \multicolumn{1}{c}{-18 $\pm$ 5}                   \\
+			\multicolumn{1}{r}{Retrospective}    & \multicolumn{1}{c}{-18 $\pm$ 5}                   \\
+			\multicolumn{1}{r}{Prospective}      & \multicolumn{1}{c}{-18 $\pm$ 5}                   \\
+			\multicolumn{1}{r}{Dual}    		 & \multicolumn{1}{c}{-18 $\pm$ 4}                   \\
+			\multicolumn{1}{l}{\textbf{Radial Strain (\%)}}          & \multicolumn{1}{c}{}        	 \\
+			\multicolumn{1}{r}{Breath-hold}      & \multicolumn{1}{c}{35 $\pm$ 16}                   \\
+			\multicolumn{1}{r}{Retrospective}    & \multicolumn{1}{c}{34 $\pm$ 16}                   \\
+			\multicolumn{1}{r}{Prospective}      & \multicolumn{1}{c}{42 $\pm$ 17}                   \\
+			\multicolumn{1}{r}{Dual}		     & \multicolumn{1}{c}{34 $\pm$ 16}                   \\
+			\multicolumn{1}{l}{\textbf{Longitudinal Strain (\%)}}    & \multicolumn{1}{c}{}          \\
+			\multicolumn{1}{r}{Breath-hold}      & \multicolumn{1}{c}{-13 $\pm$ 4}                   \\
+			\multicolumn{1}{r}{Retrospective}    & \multicolumn{1}{c}{-14 $\pm$ 3}                   \\
+			\multicolumn{1}{r}{Prospective}      & \multicolumn{1}{c}{-13 $\pm$ 3}                   \\
+			\multicolumn{1}{r}{Dual}		     & \multicolumn{1}{c}{-14 $\pm$ 4}            		 \\
+			\bottomrule                                                 
+		\end{tabular}
+	\end{table}
+	
+	%Table 4.3
+	\begin{table}
+		\centering
+		\caption[Segmental strain agreement between navigator gating and breath-holds from spiral cine DENSE]{\textbf{Segmental strain agreement between navigator gating and breath-holds from spiral cine DENSE.}}
+		\label{table:nav_CI_seg_strains}
+		\begin{tabular}{c c c c c}
+			\toprule
+			\multicolumn{1}{c}{}&\multicolumn{1}{c}{\textbf{Bias}}&\multicolumn{1}{c}{\textbf{95\% LoA}}& \multicolumn{1}{c}{\textbf{CoV (\%)}} & \multicolumn{1}{c}{\textbf{p-value}}\\ \midrule
+			\multicolumn{1}{l}{\textbf{Circumferential Strain (\%)}}                       						   & \multicolumn{4}{c}{}     \\
+			\multicolumn{1}{r}{Retrospective--Breath-hold}  & \multicolumn{1}{c}{0}  & \multicolumn{1}{c}{$\pm$ 5} & \multicolumn{1}{c}{8}   & \multicolumn{1}{c}{0.94} \\
+			\multicolumn{1}{r}{Prospective--Breath-hold}    & \multicolumn{1}{c}{0}  & \multicolumn{1}{c}{$\pm$ 8} & \multicolumn{1}{c}{13}  & \multicolumn{1}{c}{0.78} \\
+			\multicolumn{1}{r}{Dual--Breath-hold}           & \multicolumn{1}{c}{-1} & \multicolumn{1}{c}{$\pm$ 5} & \multicolumn{1}{c}{8}   & \multicolumn{1}{c}{0.11} \\
+			\multicolumn{1}{l}{\textbf{Radial Strain (\%)}}                       						   & \multicolumn{4}{c}{}     \\
+			\multicolumn{1}{r}{Retrospective--Breath-hold}  & \multicolumn{1}{c}{0}  & \multicolumn{1}{c}{$\pm$ 25} & \multicolumn{1}{c}{19}   & \multicolumn{1}{c}{0.79} \\
+			\multicolumn{1}{r}{Prospective--Breath-hold}    & \multicolumn{1}{c}{8}  & \multicolumn{1}{c}{$\pm$ 36} & \multicolumn{1}{c}{28}  & \multicolumn{1}{c}{0.002*} \\
+			\multicolumn{1}{r}{Dual--Breath-hold}           & \multicolumn{1}{c}{-1} & \multicolumn{1}{c}{$\pm$ 29} & \multicolumn{1}{c}{23}   & \multicolumn{1}{c}{0.61} \\
+			\multicolumn{1}{l}{\textbf{Longitudinal Strain (\%)}}                       						   & \multicolumn{4}{c}{}     \\
+			\multicolumn{1}{r}{Retrospective--Breath-hold}  & \multicolumn{1}{c}{-1} & \multicolumn{1}{c}{$\pm$ 7} & \multicolumn{1}{c}{13}   & \multicolumn{1}{c}{0.17} \\
+			\multicolumn{1}{r}{Prospective--Breath-hold}    & \multicolumn{1}{c}{0}  & \multicolumn{1}{c}{$\pm$ 9} & \multicolumn{1}{c}{17}   & \multicolumn{1}{c}{0.75} \\
+			\multicolumn{1}{r}{Dual--Breath-hold}           & \multicolumn{1}{c}{-1} & \multicolumn{1}{c}{$\pm$ 8} & \multicolumn{1}{c}{13}   & \multicolumn{1}{c}{0.19} \\
+			\bottomrule
+			\multicolumn{5}{l}{\footnotesize* indicates p $<$ 0.05} \\                                 
+		\end{tabular}
+	\end{table}
+	
+	%Table 4.4
+	\begin{table}
+		\centering
+		\caption[CI Results for Differences in Strain Between Navigator Gating and Breathhold DENSE]{\textbf{CI Results for Differences in Strain Between Navigator Gating and Breathhold DENSE.}}
+		\label{table:nav_CI_strains}
+		\begin{tabular}{c c c}
+			\toprule
+			\multicolumn{1}{c}{}&\multicolumn{1}{c}{\textbf{95\% LoA}} & \multicolumn{1}{c}{\textbf{p-value}}\\ \midrule
+			\multicolumn{1}{l}{\textbf{Circumferential Strain (\%)}}   & \multicolumn{2}{c}{}     \\
+			\multicolumn{1}{r}{Retrospective--Breath-hold}  & \multicolumn{1}{c}{[-1.0--1.1]}  & \multicolumn{1}{c}{0.95} \\
+			\multicolumn{1}{r}{Prospective--Breath-hold}    & \multicolumn{1}{c}{[-0.6--2.7]}  & \multicolumn{1}{c}{0.17} \\
+			\multicolumn{1}{r}{Dual--Breath-hold}           & \multicolumn{1}{c}{[-1.6-–0.5]}  & \multicolumn{1}{c}{0.29} \\
+			\multicolumn{1}{l}{\textbf{Radial Strain (\%)}}            & \multicolumn{2}{c}{}     \\
+			\multicolumn{1}{r}{Retrospective--Breath-hold}  & \multicolumn{1}{c}{[-7.4--2.0]}  & \multicolumn{1}{c}{0.23} \\
+			\multicolumn{1}{r}{Prospective--Breath-hold}    & \multicolumn{1}{c}{[-2.8--8.3]}  & \multicolumn{1}{c}{0.29} \\
+			\multicolumn{1}{r}{Dual--Breath-hold}           & \multicolumn{1}{c}{[-8.3–-3.2]}  & \multicolumn{1}{c}{0.34} \\
+			\multicolumn{1}{l}{\textbf{Longitudinal Strain (\%)}}      & \multicolumn{2}{c}{}     \\
+			\multicolumn{1}{r}{Retrospective--Breath-hold}  & \multicolumn{1}{c}{[-1.0–-2.0]}   & \multicolumn{1}{c}{0.85} \\
+			\multicolumn{1}{r}{Prospective--Breath-hold}    & \multicolumn{1}{c}{[-0.3–-2.9]}   & \multicolumn{1}{c}{0.09} \\
+			\multicolumn{1}{r}{Dual--Breath-hold}           & \multicolumn{1}{c}{[-0.8--1.9]}   & \multicolumn{1}{c}{0.38} \\
+			\bottomrule                                 
+		\end{tabular}
+	\end{table}
 
 \subsection{Signal-to-Noise Ratio}
 	In adults, single navigator configurations had a 17-28\% reduction in SNR compared to breath-hold DENSE (Table~\ref{table:navigator_snr}). There was no difference in SNR between the dual navigator configuration and breath-hold DENSE (p = 0.06). Among navigator configurations, dual and retrospective navigator configurations were comparable and both had better SNR (23\% and 15\%, respectively) compared to the prospective configuration (p = 0.02, p = 0.004, respectively).

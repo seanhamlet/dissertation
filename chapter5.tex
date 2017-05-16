@@ -66,7 +66,10 @@
 \subsection{Training}
 	Off-scanner training has been used by other investigators to ensure participants are comfortable and understand a navigator feedback interface before entering the magnet \cite{Feuerlein2009}. We wanted to determine the efficacy of off- scanner training with the FG on navigator efficiency, image quality, and heart rate. Thus, 30 of the 50 enrolled participants were randomized into equal groups to either receive extensive off-scanner training or no off-scanner training prior to scanning; thus, the groups were referred to as 'trained' and 'untrained.' As mentioned above, all subjects (including trained and untrained participants) underwent minimal training in the scanner, which was defined as two 30-heartbeat practice scans prior to FG acquisitions. The remaining 20 participants also received off-scanner training, but they were not included within the trained subgroup for analysis because they were not randomized to this treatment.
 	
-	Each trained participant was introduced to the FG using	an MRI simulator prior to the formal study. The MRI simulator utilized a PrimeSense Carmine 1.09 (Prime- Sense, Tel Aviv, Israel) 3D camera to precisely measure the chest wall and abdomen excursion as a proxy for diaphragm translation \cite{Harte2016,Heß2015}. Each participant had to complete goal-based training before advancing to CMR scanning. Training time was recorded for all trained participants. The training protocol is described in detail in Appendix B.
+	Each trained participant was introduced to the FG using	an MRI simulator prior to the formal study. The MRI simulator utilized a PrimeSense Carmine 1.09 (Prime- Sense, Tel Aviv, Israel) 3D camera to precisely measure the chest wall and abdomen excursion as a proxy for diaphragm translation \cite{Harte2016,Heß2015}. Each participant had to complete goal-based training before advancing to CMR scanning. Training time was recorded for all trained participants.
+	
+\subsection{Training Protocol}
+	The goal-based training protocol was as follows: First, the children were instructed to perform 3 sequential end-expiratory breath-holds to determine the optimal location for the acceptance window. Then the children were instructed to complete 9 levels of the FG, which progressed in difficulty. Difficulty was increased by either 1) decreasing the acceptance window size or 2) increasing the time delay between chest excursion recording and fish location update. Because the navigator gating sequence only measures the diaphragm position during each heartbeat, children with slower heartbeats may experience "delays" between diaphragm movement and fish location update. In order to complete each level, the children had to acquire 100 points. If all bubbles were acquired in a row with no breaks, each level could be completed in $\sim$33 seconds.
 
 \subsection{Statistics}
 	Statistical analyses were completed using R version 3.2.2 (R Foundation for Statistical Computing, Vienna, Austria). All continuous measurements were reported as mean $\pm$ standard deviation. Navigator efficiency, SNR, heart rate, and global left ventricular strains were tested for normality using a Shapiro-Wilk test. Average navigator efficiency, SNR, heart rate, and strain were compared between NF and FG acquisitions using a paired student's t-test or Wilcoxon Signed-Rank test when appropriate, and compared between untrained and trained groups using a student's t-test or Mann-Whitney U test when appropriate. To determine whether age had an effect on navigator efficiency, age was correlated with navigator efficiency for both NF and FG acquisitions.
@@ -141,6 +144,66 @@
 			\bottomrule                                                 
 		\end{tabular}
 	\end{table}
+
+\subsection{Survey Responses}
+	In order to formally measure the enjoyment and response of the children playing the Feedback Game, we asked the children to fill out a post-scan survey that consisted of 7 questions. Those questions and responses are listed below. In general, most participants 1) found Bubble Gulp to be easy to play; 2) enjoyed playing Bubble Gulp; 3) thought they were generally getting better as they played; 4) thought training was/would have been somewhat helpful; 5) had no comments on how to improve 'Bubble Gulp'; 6) enjoy playing videogames; and 7) play videogames daily.
+
+	\begin{figure}
+		\centering
+		\includegraphics{figures/gamepaper/Question1}
+		\caption[Survey Question 1]{Question 1.	How easy was playing Bubble Gulp? \\ 1: Really easy \\ 2: Easy \\3: Neither easy nor difficult \\4: Difficult \\5: Really Difficult}
+		\label{fig:question1}
+	\end{figure}
+	
+	\begin{figure}
+		\centering
+		\includegraphics{figures/gamepaper/Question2}
+		\caption[Survey Question 2]{Question 2.	How much did you enjoy playing Bubble Gulp? \\ 1: Really enjoyed it \\ 2: Enjoyed it \\3: Neither \\4: Did not enjoy it \\5: Really did not enjoy it}
+		\label{fig:question2}
+	\end{figure}
+	
+	\begin{figure}
+		\centering
+		\includegraphics{figures/gamepaper/Question3}
+		\caption[Survey Question 3]{Question 3.	Did you think you were getting better, stayed the same, or were getting worse as you were playing Bubble Gulp at the end of the study compared to when you first tried it? \\ 1: Better \\ 2: Stayed the same \\3: Worse}
+		\label{fig:question3}
+	\end{figure}
+	
+	\begin{figure}
+		\centering
+		\includegraphics{figures/gamepaper/Question4}
+		\caption[Survey Question 4]{Question 4.	We have a pretend MRI scanner where you can learn to play Bubble Gulp before getting into the actual MRI scanner. Do you think using this pretend MRI scanner first would have been/was: \\ 1: Very helpful \\ 2: Somewhat helpful \\3: Not helpful \\ 4: A total wast of time}
+		\label{fig:question4}
+	\end{figure}
+	
+	\newpage
+	5.	Do you have any comments on how to improve Bubble Gulp?
+	\begin{itemize}
+		\item Mostly "None"
+		\item "Make the fish pink"
+		\item "Make the lines further a part on the screen"
+		\item "Liked the simple concept and how could control with breathing"
+		\item "Reverse direction of fish movement with breathing"
+		\item "Make not as glitchy, (make smoother)"
+		\item "Make lines move to more comfortable spot to breathe in"
+		\begin{itemize}
+			\item This subject moved before their last scan
+		\end{itemize}
+	\end{itemize}
+	
+	\begin{figure}
+		\centering
+		\includegraphics{figures/gamepaper/Question6}
+		\caption[Survey Question 6]{Question 6. How much do you enjoy playing videogames? \\ 1: Really enjoy\\ 2: Enjoy\\ 3: Neither\\ 4: Do not enjoy \\ 5: Really do not enjoy}
+		\label{fig:question6}
+	\end{figure}
+	
+	\begin{figure}
+		\centering
+		\includegraphics{figures/gamepaper/Question7}
+		\caption[Survey Question 7]{Question 7. How often do you play videogames? \\ 1: Daily\\ 2: 2-3 times per week\\ 3: Weekly\\ 4:  1-2 times per month\\ 5: Seldom to never}
+		\label{fig:question7}
+	\end{figure}
 
 \section{Discussion}
 	Feedback of the diaphragm position during CMR has been shown to improve navigator efficiency in adults \cite{Feuerlein2009,Jhooti2011}. This study explored how the use of a feedback game (FG) affects navigator efficiency compared to traditional no- feedback (NF) acquisitions in children. The results of the study showed that, compared to NF, using the FG resulted in 1) substantially improved navigator efficiency (from 33 to 58\%); 2) slightly improved SNR; 3) slightly higher mean heart rate; and 4) slightly lower global strain magnitudes. Importantly, these results were not affected by the use of an off-scanner training protocol, which suggests that lengthy, robust training (11 min in our protocol) does not need to be a part of the clinical/imaging workflow for this interface.
