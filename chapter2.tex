@@ -36,7 +36,7 @@
 \subsection{DENSE Acquisition}
 	For each subject, navigator-gated 2D spiral cine DENSE in 2-chamber and 4-chamber long-axis and basal, mid-ventricular, and apical short-axis orientations of the left ventricle were acquired four times. Specifically, all image orientations were acquired with the navigator acceptance window prescribed at the patient-specific maximum and minimum end-expiratory positions, and twice in the middle position to quantify variability in strain independent of end-expiratory position variability (Figure~\ref{fig:translatedAccWindowBlue}). A navigator feedback system, which used an angled mirror and projector screen placed at the back of the scanner bore, was used to facilitate quicker acquisitions by enabling subjects to view the navigator acceptance window position in real-time during image acquisition \cite{Hamlet2016a}. For each end-expiratory position, all image orientations were acquired within a single navigator-gated scan.
 	
-	Prospective ECG gating was used during DENSE acquisitions. The number of cardiac phases ranged from 31 to 49 and varied based on subject heart rate. Additional DENSE imaging parameters included: spiral interleaves = 6, FOV~=~ 360x360 mm$^2$, pixel spacing = 2.8x2.8 mm$^2$, slice thickness = 8 mm, TE = 1.1 ms, TR = 17 ms, variable flip angle = 20$^{\circ}$, displacement encoding = 0.06 cyc/mm \cite{Wehner2015a}, through-plane dephasing = 0.08 cyc/mm \cite{Zhong2006a}, CSPAMM echo suppression \cite{Kim2004}, and view sharing. A dual-navigator strategy was used, requiring the diaphragm to be within the navigator acceptance window ($\pm$3 mm) both before and after the data acquisition during each R-R interval \cite{Hamlet2016}.
+	Prospective ECG gating was used during DENSE acquisitions. The number of cardiac phases ranged from 31 to 49 and varied based on subject heart rate. Additional DENSE imaging parameters included: spiral interleaves = 6, FOV~=~ 360x360 mm\textsuperscript{2}, pixel spacing = 2.8x2.8 mm\textsuperscript{2}, slice thickness = 8 mm, TE = 1.1 ms, TR = 17 ms, variable flip angle = 20$^{\circ}$, displacement encoding = 0.06 cyc/mm \cite{Wehner2015a}, through-plane dephasing = 0.08 cyc/mm \cite{Zhong2006a}, CSPAMM echo suppression \cite{Kim2004}, and view sharing. A dual-navigator strategy was used, requiring the diaphragm to be within the navigator acceptance window ($\pm$3 mm) both before and after the data acquisition during each R-R interval \cite{Hamlet2016}.
 	
 \subsection{DENSE Post-Processing}
 	DENSE image data were analyzed using the open-source software, \textit{DENSEanalysis} \cite{Gilliam2016a}. For each image orientation, the left ventricular myocardium was manually delineated using epicardial and endocardial contours and an end-diastolic and end-systolic cardiac phase \cite{Suever2014}. Post-processing and segmentation were performed as described by Suever et al. \cite{Suever2014}. Seed points indicating unwrapped phase data were manually selected, and a path-following algorithm was used to unwrap the displacement-encoded phase data. The resulting displacement trajectories were further processed by applying spatial smoothing and temporal fitting as previously described \cite{Spottiswoode2007}.
@@ -59,7 +59,7 @@
 	The average range of end-expiratory positions were not significantly different (p~=~0.94) between the healthy (10.1 $\pm$ 4.8~mm) and patient (10.3 $\pm$ 4.2~mm) groups (total range of 4-–19~mm). Since range is sensitive to outliers, the standard deviation of end-expiratory position was also compared between groups, and similarly there were no significant differences (3.1 $\pm$ 1.3~mm vs 3.4 $\pm$ 1.7~mm, p~=~0.70) \cite{Hamlet2017}.
 	
 \subsection{Differences and Variability in Peak Strains}
-	There was no interaction between group (healthy vs patient) and navigator acceptance window position for peak strains (Table~\ref{table:strainDifferencesPosition}), thus the remaining analyses were performed with all subjects combined. Neither global, regional, nor segmental peak strains were significantly different as a function of acceptance window position (Table~\ref{table:strainDifferencesPosition}, Tables~\ref{table:SegmentalEccStrainDiff}, and ~\ref{table:SegmentalErrStrainDiff}). Moreover, the differences in mean strain between any two acceptance window positions were each smaller than their corresponding inter-test 95\% limits of agreement (Table~\ref{table:strainDifferencesPosition}). For example, mean global circumferential strain across acceptance window positions ranged from -16\% to -17\%; the difference was 1\%, which is smaller than the corresponding inter-test 95\% limits of agreement of $\pm$1.7\% (Table~\ref{table:strainDifferencesPosition}). Finally, the standard deviations in peak strains were not significantly different between inconsistent (minimum, middle, and maximum) and consistent (repeated measurements at middle position) acceptance window positions for all subjects combined (Table~\ref{table:strainInconsVsCons}). With at least 80\% power, this study had the ability to detect strain differences of 4.7\%, 1.0\%, and 1.7\% (absolute) between end-expiratory positions for global radial, circumferential, and longitudinal strain, respectively (Table~\ref{table:strainDifferencesPower}). Additionally, this study had at least 80\% power to detect differences of 8.9\%, 2.2\% and 2.6\% for regional radial, circumferential, and longitudinal strain, respectively (Table~\ref{table:strainDifferencesPower}).
+	There was no interaction between group (healthy vs patient) and navigator acceptance window position for peak strains (Table~\ref{table:strainDifferencesPosition}), thus the remaining analyses were performed with all subjects combined. Neither global, regional, nor segmental peak strains were significantly different as a function of acceptance window position (Table~\ref{table:strainDifferencesPosition}, Tables~\ref{table:SegmentalEccStrainDiff}, and ~\ref{table:SegmentalErrStrainDiff}). Moreover, the differences in mean strain between any two acceptance window positions were each smaller than their corresponding inter-test 95\% limits of agreement (Table~\ref{table:strainDifferencesPosition}). For example, mean global circumferential strain across acceptance window positions ranged from -16\% to -17\%; the difference was 1\%, which is smaller than the corresponding inter-test 95\% limits of agreement of $\pm$1.7\% (Table~\ref{table:strainDifferencesPosition}). Finally, the standard deviations in peak strains were not significantly different between inconsistent (minimum, middle, and maximum) and consistent (repeated measurements at middle position) acceptance window positions for all subjects combined (Table~\ref{table:strainInconsVsCons}). With at least 80\% power, this study had the ability to detect strain differences of 4.7\%, 1.0\%, and 1.7\% (absolute) between end-expiratory positions for global radial, circumferential, and longitudinal strain, respectively (Table~\ref{table:strainDifferencesPower}). Additionally, this study had at least 80\% power to detect differences of 8.9\%, 2.2\% and 2.6\% for regional radial, circumferential, and longitudinal strain, respectively (Table~\ref{table:strainDifferencesPower}). For both global and regional strains, detectable strain differences were smaller than the corresponding inter-test 95\% limits of agreement (Table~\ref{table:strainDifferencesPower}).
 	
 	%Table 2.1
 	\begin{landscape}
@@ -238,38 +238,37 @@
 	\end{table}
 
 	%Table 2.5
-	[TODO: reference comparison (like the inter-test limit) (also include in text)]
 	\begin{table}
 		\centering
-		\caption[Power analyses for the ability to detect a difference in global and regional strain between different end-expiratory positions]{\textbf{Power analyses for the ability to detect a difference in global and regional strain between different end-expiratory positions.}}
+		\caption[Power analyses for the ability to detect a difference in global and regional strain between different end-expiratory positions]{\textbf{Power analyses for the ability to detect a difference in global and regional strain between different end-expiratory positions.} Inter-test 95\% limits of agreement are shown for reference comparison.}
 		\label{table:strainDifferencesPower}
-		\begin{tabular}{c c c}
+		\begin{tabular}{c c c c}
 			% Table Head
 			\toprule
-			\multirow{2}{*}{\textbf{Measurement}} & \multirow{2}{*}{\textbf{Power (\%)}} & \textbf{Difference To Detect}  \\
-			 & & \textbf{(absolute, \%)}\\
+			\multirow{2}{*}{\textbf{Measurement}} & \multirow{2}{*}{\textbf{Power (\%)}} & \textbf{Difference To Detect} & \textbf{Inter-test Limits} \\
+			 & & \textbf{(absolute, \%)} & \textbf{(\%)} \\
 			\midrule
 			% Table Body
 			% Radial Strain
-			\multicolumn{1}{l}{Radial Strain (\%)} & &                                 \\
-			\multicolumn{1}{r}{Global}  	  & 80.9 $\pm$ 0.8 & 4.7                   \\
-			\multicolumn{1}{r}{Base}  		  & 96.1 $\pm$ 0.4 & \multirow{3}{*}{8.9}  \\
-			\multicolumn{1}{r}{Mid-Ventricle} & 98.4 $\pm$ 0.2 &                       \\
-			\multicolumn{1}{r}{Apex}  		  & 80.2 $\pm$ 0.8 &                       \\
+			\multicolumn{1}{l}{Radial Strain (\%)} & & &                                            \\
+			\multicolumn{1}{r}{Global}  	  & 80.9 $\pm$ 0.8 & 4.7                  & $\pm$7.9    \\
+			\multicolumn{1}{r}{Base}  		  & 96.1 $\pm$ 0.4 & \multirow{3}{*}{8.9} & $\pm$13.1   \\
+			\multicolumn{1}{r}{Mid-Ventricle} & 98.4 $\pm$ 0.2 &                      & $\pm$10.4   \\
+			\multicolumn{1}{r}{Apex}  		  & 80.2 $\pm$ 0.8 &                      & $\pm$15.8   \\
 			% Circumferential Strain
-			\multicolumn{1}{l}{Circumferential Strain (\%)} & &                        \\
-			\multicolumn{1}{r}{Global}  	  & 80.5 $\pm$ 0.8 & 1.0                   \\
-			\multicolumn{1}{r}{Base}  		  & 99.6 $\pm$ 0.1 & \multirow{3}{*}{2.2}  \\
-			\multicolumn{1}{r}{Mid-Ventricle} & 100 $\pm$ 0.0  &                       \\
-			\multicolumn{1}{r}{Apex}  		  & 80.6 $\pm$ 0.8 &                       \\
+			\multicolumn{1}{l}{Circumferential Strain (\%)} & & &                                   \\
+			\multicolumn{1}{r}{Global}  	  & 80.5 $\pm$ 0.8 & 1.0                  & $\pm$1.7    \\
+			\multicolumn{1}{r}{Base}  		  & 99.6 $\pm$ 0.1 & \multirow{3}{*}{2.2} & $\pm$3.6    \\
+			\multicolumn{1}{r}{Mid-Ventricle} & 100 $\pm$ 0.0  &                      & $\pm$2.1    \\
+			\multicolumn{1}{r}{Apex}  		  & 80.6 $\pm$ 0.8 &                      & $\pm$4.6    \\
 			% Longitudinal Strain
-			\multicolumn{1}{l}{Longitudinal Strain (\%)} & & 	    				   \\
-			\multicolumn{1}{r}{Global}        & 80.0 $\pm$ 0.8 &  1.7                  \\
-			\multicolumn{1}{r}{2ch}  		  & 95.0 $\pm$ 0.4 &  \multirow{2}{*}{2.6} \\
-			\multicolumn{1}{r}{4ch}  		  & 80.5 $\pm$ 0.8 &     				   \\ 
+			\multicolumn{1}{l}{Longitudinal Strain (\%)} & & &	    				                \\
+			\multicolumn{1}{r}{Global}        & 80.0 $\pm$ 0.8 & 1.7                  & $\pm$3.2    \\
+			\multicolumn{1}{r}{2ch}  		  & 95.0 $\pm$ 0.4 & \multirow{2}{*}{2.6} & $\pm$6.2    \\
+			\multicolumn{1}{r}{4ch}  		  & 80.5 $\pm$ 0.8 &     				  & $\pm$4.1    \\ 
 			\bottomrule
 		\end{tabular}
-	\end{table}
+	\end{table} 
 
 \section{Discussion}
 	Quantification of cardiac strains typically requires a series of image acquisitions performed during end-expiratory breath-holds. This study explored the effects of inconsistent end-expiratory positions on the quantification of left ventricular cardiac strains. The results of the study showed that 1) inconsistent end-expiratory positions had minimal effect on the quantification of global and regional peak strains compared to inter-test variability for a given imaging location; and 2) the variability of global and regional peak strains was similar between inconsistent and consistent end-expiratory positions. Importantly, these findings provide assurance that the measurement of cardiac strains is relatively robust with respect to inconsistent end-expiratory positions.
@@ -278,7 +277,7 @@
 	
 	Previous studies suggest that regions of the heart could displace at least 3 and possibly up to 14 mm through the fixed imaging plane between breath-holds \cite{Slomka2007,Swingen2003,Wang1995b,McLeish2002}. Our study had an average range of end-expiratory diaphragm position between breath-holds of approximately 10 mm, which is consistent with previous studies. Since the imaging slice thickness is 8 mm, even with a 14 mm through-plane displacement, there is likely not much difference in the acquired data from the imaged heart locations compared to the imaging plane location. Overall, since there were no significant differences in peak global, regional, and segmental strains between end-expiratory positions, patient end-expiratory diaphragm position does not have to be monitored when performing breath-hold DENSE acquisition for single image analyses.
 	
-	The goal of this study was to quantify the effects of inconsistent end-expiratory positions on cardiac strains by computing the differences in strain between different end-expiratory positions. Thus, it was important for this study to detect meaningful strain differences between different patient-specific end-expiratory positions. The study had 80\% power to detect global strain differences of 4.7\%, 1.0\%, and 1.7\% and regional strain differences of 8.9\%, 2.2\%, and 2.6\%, between different end-expiratory positions for radial, circumferential, and longitudinal strain, respectively. Importantly, these detectable differences were similar to or smaller than previously reported values of inter-test limits of agreement for circumferential strain and radial strain \cite{Wehner2015a} [TODO: add this data to table]. Notably, in some regions, the power to detect a meaningful difference was much higher (close to 100\%) indicating that, in those regions, this study may have had the ability to detect even smaller than reported detectable differences.
+	The goal of this study was to quantify the effects of inconsistent end-expiratory positions on cardiac strains by computing the differences in strain between different end-expiratory positions. Thus, it was important for this study to detect meaningful strain differences between different patient-specific end-expiratory positions. The study had 80\% power to detect global strain differences of 4.7\%, 1.0\%, and 1.7\% and regional strain differences of 8.9\%, 2.2\%, and 2.6\%, between different end-expiratory positions for radial, circumferential, and longitudinal strain, respectively. Importantly, these detectable differences were similar to or smaller than this study's reported inter-test 95\% limits of agreement (Table~\ref{table:strainDifferencesPower}) and previously reported values of inter-test limits of agreement for circumferential strain ($\pm$2.0 \%) and radial strain ($\pm$13.0 \%) \cite{Wehner2015a}. Notably, in some regions, the power to detect a meaningful difference was much higher (close to 100\%) indicating that, in those regions, this study may have had the ability to detect even smaller than reported detectable differences.
 	
 	We used DENSE to investigate our hypothesis that a patient's normal variability in end-expiratory position between image acquisitions significantly affects the quantification of cardiac strains. DENSE was chosen to test our hypothesis because it has been previously shown to have good reproducibility \cite{Haggerty2013}, can be acquired with high spatial resolution \cite{Aletras1999b,Aletras1999c}, and enables straightforward computation of cardiac strains. However, our findings should generalize to other image acquisitions that are used to derive measures of cardiac strains such as echocardiography, tagged MRI, etc.
 

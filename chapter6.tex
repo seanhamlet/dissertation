@@ -36,14 +36,15 @@
 	
 	In Chapters 2 and 3, we examined differences and variability in strains and torsion due to inconsistent breath-hold positions in a relatively small patient population. It would be beneficial to see if these results remain the same for a larger patient group with more heterogeneous contraction patterns, for example in patients with a history of myocardial infarction that has affected contractile function within a specific region of the heart. In particular, patients who have infarcted regions may have steeper gradients in strain from an infarcted to non-infarcted region. Moreover, it would be interesting to investigate whether certain diseases affect the results more than others, such as conditions that affect a patient's ability to breath-hold in a consistent manner.
 
-
 \subsection{Aim 2}
 	For Chapter 4, we identified the optimal navigator configuration using \textit{healthy} subjects. Due to the lengthy breath-hold scans and patients' limited ability to breath-hold, they may not be able to perform the long breath-hold acquisition. Moreover, patients may not be able to achieve as high of a navigator efficiency as the healthy subjects did in this study. Therefore, it would be important to determine if the results of the optimal navigator configuration remain the same when using patients.
 
 \subsection{Aim 3}
 	We only tested the videogame in children without significant past medical history. Similar to future directions of Chapters 2 through 4, Chapter 5's study should also be performed in children who routinely undergo cardiac MRI acquisitions. In particular, it is known that 25\% of patients born with Tetrology of Fallot (a congenital heart disease) have behavioral and learning difficulties \cite{Piran2011}, which can make it challenging for them to benefit from using the videogame. However, even if only a portion of the patients achieve better than typical navigator efficiencies, there would still be clinical benefit.
-	
-	Another future direction would be to set up the videogame at other research sites, particularly sites that have a high throughput of patients who undergo cardiac MRI acquisitions. Due to its non-invasive nature to the scanner, the videogame is easily adopted. In particular, if new features are needed in order to adapt the videogame to a different scanner or for patients to better understand or benefit from the videogame, they can be easily added.
+
+	Another future direction would be to set up the videogame at other research sites, particularly sites that have a high throughput of patients who undergo cardiac MRI acquisitions. Due to its non-invasive connection to the scanner, the videogame can be easily adopted. Recently, the videogame has been implemented in a different MRI acquisition platform (Philips) at Boston Children's Hospital to test its efficacy in a patient population. Instead of a navigator image to capture, this Philips acquisition platform had a continuously updating text file containing the required locations (acceptance window and diaphragm position). Due to the modular nature of the code, all that was needed was to write a new input source class that accepted an updating log file instead of a navigator image.
+
+	In particular, if new features are needed in order to adapt the videogame to a different scanner or for patients to better understand or benefit from the videogame, they can be easily added.
 	
 	Right now, the videogame is written using MATLAB, which requires the purchase of a license. Another possible future direction would be to re-design the videogame using free programming software so that it can be more freely distributed and won't be limiting to people who do not have the MATLAB software license. 
 	
