@@ -26,26 +26,54 @@
 	A navigator feedback videogame (FG), called "Bubble Gulp", was developed using MATLAB (The Mathworks Inc, Natick, MA). Each frame of the navigator image provided within the Siemens Syngo user-interface (Siemens Healthcare, Erlangen, Germany) (Figure~\ref{fig:feedbackgame}a) was captured using an Epiphan DVI2USB 3.0 (Epiphan Systems Inc., Palo Alto, California) frame grabber and processed in real-time during cardiac MR to yield a kid-friendly representation of the diaphragm position (Figure~\ref{fig:feedbackgame}b). Navigator image processing was performed using an externally connected laptop running Windows 7 with an Intel Core i7 processor and 16 GB of RAM. The FG interface was then projected to the participant in the scanner using an angled mirror and a magnetic resonance compatible projector (Figure~\ref{fig:MRI_feedback}).
 	
 	The diaphragm position relative to the acceptance window (Figure~\ref{fig:feedbackgame}a) was represented by the vertical position of a fish character relative to parallel green lines containing scrolling dots, representing bubbles (Figure~\ref{fig:feedbackgame}b). The objective of the game was to control the fish's vertical position, which was updated with each navigator pulse, so it would "gulp" bubbles and acquire points. To incentivize slow, stable breathing, point values increased as the fish spent more time within the green lines, instead of frequent short-duration breath-holds. However, prior to any use of the FG, children were instructed \textit{not} to hold their breath for an uncomfortable amount of time and to breathe when needed. Finally, the FG interface displayed text to instruct children how to adjust their breathing to place the fish in between the green lines (Figure~\ref{fig:feedbackgame}b).
+	
+	\begin{figure} 
+		\includegraphics{figures/gamepaper/02-feedback_videogame_in_mri}
+		\caption[MRI Feedback Setup]{\textbf{MRI Feedback Setup} Feedback videogame was shown to children during cardiac MR with an angled mirror and MR-compatible projector.}
+		\label{fig:MRI_feedback}
+	\end{figure}
 
-\subsection{Problems to solve}
+\subsection{Motivation for Design}
+	Bubble Gulp's overall design is based on three concepts: \textit{portability}, \textit{compatibility}, and \textit{independence}. First, Bubble Gulp needs to have the ability to be transfered easily from one MRI machine site to another so that the system can be easily relocated to collaborators or within research groups. Second, Bubble Gulp needs to be compatible with multiple MRI machine vendor (and their corresponding navigator image designs) so that its use is not restricted to one vendor. Third, Bubble Gulp needs to work independently from the MRI machine and not directly integrate with the machines software so that its use does not affect the MRI machines delicate controls.
+	
 1. Portable
 2. Ability to capture high quality images - DVI framegrabber
 3. Easily adoptable at different scanner interfaces or inputs (solution: make code modular)
 
 \subsection{Hardware Design}
-- flow diagram
-- 
+	The hardware design begins with the MRI computer itself, which has the ability to independently display the navigator image on one of its video outputs. The overall block diagram is shown in Figure~\ref{fig:hardwareblockdiagram}. The second video signal only displayed the navigator image. This signal was split so that one signal was connected to a monitor in the control room and the second signal was connected to the Epiphan DVI2USB 3.0 (Epiphan Systems Inc., Palo Alto, California) frame grabber.
+	
+	This DVI frame grabber allows for high resolution (up to 1920x1200) capturing at up to 60 frames per second (fps), which will allow for simpler image processing due to more accurate image capturing. Most importantly, this frame grabber has a Java interface for Windows, Linux, and Mac OS X. Thus, we wrote a small Matlab "wrapper" program to interface and connect with the frame grabber so that the entirety of the Bubble Gulp code was written using Matlab.
+	
+	The frame grabber was connected directly to the laptop via USB. Once the navigator image was captured, the Matlab code on the laptop processed the image into Bubble Gulp which was displayed as an independent Matlab figure window on the laptop's secondary display through the VGA port. This VGA port was then connected to an MRI-compatible projector within the MRI room, which displayed Bubble Gulp to the child on a screen at the back of the scanner bore (Figure~\ref{fig:MRI_feedback}). Not shown in the block diagram is a VGA splitter that allowed Bubble Gulp to be 
+	
+	Regarding the overall design, the hardware design allows for \textit{portability} and \textit{independence}, since the interface simply plugs into the video output on the scanner and does not integrate with the scanner software, and \textit{compatibility}, since multiple machine vendors will have some form of video output that can be used to capture the navigator image with a frame grabber.
+	
+	\begin{figure}
+		\centering
+		\includegraphics{figures/gamepaper/07-overallHardwareDiagram}
+		\caption[Overall hardware block diagram for Bubble Gulp (Feedback Game)]{\textbf{Overall hardware block diagram for Bubble Gulp (Feedback Game).}}
+		\label{fig:hardwareblockdiagram}
+	\end{figure}
 
-\subsection{Software Design}
+\subsection{Overall Software Design}
+	The overall software design is shown in Figure~\ref{fig:softwareblockdiagram}.
+	
+	\begin{figure}
+		\centering
+		\includegraphics{figures/gamepaper/08-overallSoftwareDiagram}
+		\caption[Overall software block diagram for Bubble Gulp (Feedback Game)]{\textbf{Overall software block diagram for Bubble Gulp (Feedback Game).}}
+		\label{fig:softwareblockdiagram}
+	\end{figure}
+
+	This wrapper class contained methods that allowed simple capture of the frame.
 - flow diagram
 - time it takes to churn through an image and update interface
 - code layout (not the code, but just how it works)
 
-\begin{figure} 
-	\includegraphics{figures/gamepaper/02-feedback_videogame_in_mri}
-	\caption[MRI Feedback Setup]{\textbf{MRI Feedback Setup} Feedback videogame was shown to children during cardiac MR with an angled mirror and MR-compatible projector.}
-	\label{fig:MRI_feedback}
-\end{figure}
+\subsection{Alogrithms}
+
+
 
 \subsection{Participants}
 	Fifty children without significant past medical history were recruited. Participants were recruited from the broader clinical community based out of our university medical center using a wide range of participant recruitment services provided by the University of Kentucky Center for Clinical and Translational Science. All participants were screened with a 12-lead ECG prior to imaging to rule out arrhythmias. The local Institutional Review Board at the University of Kentucky approved the study protocol and all participants and legal guardians provided written informed consent or assent.
