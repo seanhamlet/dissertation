@@ -57,7 +57,7 @@
 	\end{figure}
 
 \subsection{Overall Software Design}
-	The overall software design is shown in Figure~\ref{fig:softwareblockdiagram}.
+	The overall software design is shown in Figure~\ref{fig:softwareblockdiagram} and was written using Matlab (Mathworks, Natick, MA). The input to the software is a navigator image, which was captured using the DVI framegrabber and the Matlab wrapper class for the Java interface, which contained a method that allowed simple capture of the frame. Since the navigator image is updated with new data with every patient heartbeat (typically lower than 120 heartbeats per minute), a frame sampling rate of 10 fps will be sufficient to capture all changes in diaphragm position. The diaphragm location will be identified and if different from the previous position (stored), then the new position will be used to update the videogame image.
 	
 	\begin{figure}
 		\centering
@@ -66,14 +66,32 @@
 		\label{fig:softwareblockdiagram}
 	\end{figure}
 
-	This wrapper class contained methods that allowed simple capture of the frame.
-- flow diagram
-- time it takes to churn through an image and update interface
-- code layout (not the code, but just how it works)
 
-\subsection{Alogrithms}
+\subsection{Algorithm}
+	The overall goal of the image processing algorithm is to identify the location of the diaphragm position with respect to the acceptance window (Figure~\ref{fig:algorithmblockdiagram}). Once a new navigator image was sampled using the frame grabber, the first step was to identify the Microsoft Windows' window region of interest (ROI). The next step was to identify the Red Search Window ROI (Figure~\ref{fig:navImageProcessing}). The search window ROI was then used to crop the image because the videogame only needed to identify the diaphragm position with respect to the acceptance window, all area outside of the search window ROI was ignored. Within the new cropped image, the green acceptance window borders were identified along with the current diaphragm location (right-most bar). Since the DVI frame grabber captured such high resolution images, the pure color channels were used to identify the red and green ROIs. This entire algorithm (Figure~\ref{fig:algorithmblockdiagram}) only has to be run 1 time (for the first frame) so long as the position of the red search window remain the same. This is because the previous positions of the red search window, green acceptance window, and diaphragm position are always stored and compared with the new position. For example, in the algorithm, if the position of the red search window is the \textit{same as previous}, then the algorithm can used the previously stored positions to identify the current vertical location of the diaphragm position with respect to the acceptance window position. This removes several processing steps and saves time. Specifically, the entire algorithm takes about 200 ms. However, if you remove extra processing steps by having the same red search window positions, then the algorithm takes about 100 to 150ms.
+	
+	\begin{figure}
+		\centering
+		\includegraphics{figures/gamepaper/09-algorithmDiagram}
+		\caption[Overall image processing algorithm block diagram for Bubble Gulp (Feedback Game)]{\textbf{Overall image processing algorithm block diagram for Bubble Gulp (Feedback Game).}}
+		\label{fig:algorithmblockdiagram}
+	\end{figure}
 
+	\begin{figure}
+		\centering
+		\includegraphics{figures/gamepaper/10-navImageProcessing}
+		\caption[Example Navigator Image to be Processed]{\textbf{Example Navigator Image to be Processed.}}
+		\label{fig:navImageProcessing}
+	\end{figure}
 
+	The text feedback instructions requires another simple algorithm to instruct the patient on how to breathe in order to place his or her diaphragm position within the acceptance window. This text is displayed underneath the acceptance window on the left side of the videogame (Figure~\ref{fig:feedbackgame}). This algorithm is shown in Figure~\ref{fig:feedbackblockdiagram}. The acceptance window locations and diaphragm location were passed as inputs to the "feedback" function that determined if the diaphragm position was within the acceptance window. This function then would output the appropriate response to the subject on whether he or she should "hold", "breathe in", or "breathe out" (Figure~\ref{fig:feedbackblockdiagram}). The subjects were instructed to use this feedback text as a guideline when needed so that they still breathed comfortably.
+	
+	\begin{figure}
+		\centering
+		\includegraphics{figures/gamepaper/11-feedbackFunctionDiagram}
+		\caption[Basic text feedback block diagram]{\textbf{Basic text feedback block diagram.}}
+		\label{fig:feedbackblockdiagram}
+	\end{figure}
 
 \subsection{Participants}
 	Fifty children without significant past medical history were recruited. Participants were recruited from the broader clinical community based out of our university medical center using a wide range of participant recruitment services provided by the University of Kentucky Center for Clinical and Translational Science. All participants were screened with a 12-lead ECG prior to imaging to rule out arrhythmias. The local Institutional Review Board at the University of Kentucky approved the study protocol and all participants and legal guardians provided written informed consent or assent.
