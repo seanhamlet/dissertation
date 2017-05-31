@@ -43,7 +43,7 @@
 	
 	The frame grabber was connected directly to the laptop via USB. Once the navigator image was captured, the Matlab code on the laptop processed the image into Bubble Gulp which was displayed as an independent Matlab figure window on the laptop's secondary display through the VGA port. This VGA port was then connected to an MRI-compatible projector within the MRI room, which displayed Bubble Gulp to the child on a screen at the back of the scanner bore (Figure~\ref{fig:MRI_feedback}). Not shown in the block diagram is a VGA splitter that allowed Bubble Gulp to also be seen by the operator in the MR control room.
 	
-	Regarding the overall design, the hardware design allows for \textit{portability} and \textit{independence}, since the interface simply connected to the video output on the scanner and did not integrate with the scanner software, and \textit{compatibility}, since multiple machine vendors have some form of video output that can be used to capture the navigator image with a frame grabber.
+	Regarding the overall design, the hardware design allowed for \textit{portability} and \textit{independence}, since the interface simply connected to the video output on the scanner and did not integrate with the scanner software, and \textit{compatibility}, since multiple machine vendors have some form of video output that can be used to capture the navigator image with a frame grabber.
 
 	\begin{figure}
 		\centering
@@ -53,7 +53,7 @@
 	\end{figure}
 
 \subsection{Overall Software Design}
-	The overall software design is shown in Figure~\ref{fig:softwareblockdiagram} and was written using Matlab (Mathworks, Natick, MA). The input to the software is a navigator image, which was captured using the DVI framegrabber and the Matlab wrapper class for the Java interface, which contained a method that allowed simple capture of the frame. Since the navigator image is updated with new data with every patient heartbeat (typically lower than 120 heartbeats per minute), a frame sampling rate of 10 fps will be sufficient to capture all changes in diaphragm position. The diaphragm location will be identified and if different from the previous position (stored), then the new position will be used to update the videogame image.
+	The overall software design is shown in Figure~\ref{fig:softwareblockdiagram} and was written using Matlab (Mathworks, Natick, MA). The input to the software was a navigator image, which was captured using the DVI framegrabber and the Matlab wrapper class for the Java interface, which contained a method that allowed simple capture of the frame. Since the navigator image was updated with new data with every patient heartbeat (typically lower than 120 heartbeats per minute), a frame sampling rate of 10 fps was sufficient to capture all changes in diaphragm position. The diaphragm location was identified and, if different from the previous position, the new position was used to update the videogame.
 	
 	\begin{figure}
 		\centering
@@ -79,7 +79,7 @@
 		\label{fig:navImageProcessing}
 	\end{figure}
 
-	The text feedback instructions requires another simple algorithm to instruct the patient on how to breathe in order to place his or her diaphragm position within the acceptance window. This text is displayed underneath the acceptance window on the left side of the videogame (Figure~\ref{fig:feedbackgame}). This algorithm is shown in Figure~\ref{fig:feedbackblockdiagram}. The acceptance window locations and diaphragm location were passed as inputs to the "feedback" function that determined if the diaphragm position was within the acceptance window. This function then would output the appropriate response to the subject on whether he or she should "hold", "breathe in", or "breathe out" (Figure~\ref{fig:feedbackblockdiagram}). The subjects were instructed to use this feedback text as a guideline when needed so that they still breathed comfortably.
+	The text feedback instructions requires another simple algorithm to instruct the patient on how to breathe in order to place his or her diaphragm position within the acceptance window. This text is displayed underneath the acceptance window on the left side of the videogame (Figure~\ref{fig:feedbackgame}b). This algorithm is shown in Figure~\ref{fig:feedbackblockdiagram}. The acceptance window locations and diaphragm location were passed as inputs to the "feedback" function that determined if the diaphragm position was within the acceptance window. This function then would output the appropriate response to the subject on whether he or she should "hold", "breathe in", or "breathe out" (Figure~\ref{fig:feedbackblockdiagram}). The subjects were instructed to use this feedback text as a guideline when needed so that they still breathed comfortably.
 	
 	\begin{figure}
 		\centering
