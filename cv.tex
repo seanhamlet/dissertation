@@ -1,0 +1,149 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{black}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Sean}{Michael Hamlet}
+\title{Vita}
+
+% bibliography adjustements (only useful if you make citations in your resume, or print a list of publications using BibTeX)
+%   to show numerical labels in the bibliography (default is to show no labels)
+\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+%   to redefine the bibliography heading string ("Publications")
+%\renewcommand{\refname}{Articles}
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\section{Education}
+\cventry{2013--2017}{Doctor of Philosophy in Electrical Engineering}{\newline{}University of Kentucky}{Lexington, KY}{}{\textit{GPA - 4.0}}  % arguments 3 to 6 can be left empty
+\cventry{2011--2012}{Master of Science in Electrical Engineering}{\newline{}University of Kentucky}{Lexington, KY}{}{\textit{GPA - 4.0}}
+\cventry{2006--2010}{Bachelor of Science in Electrical Engineering}{\newline{}Western Kentucky University}{Bowling Green, KY}{}{\textit{GPA - 4.0}}
+
+\section{Professional Positions}
+\cventry{2013--2017}{Graduate Research Assistant}{Cardiac Imaging Technology Lab \newline{}University of Kentucky}{Lexington, KY}{}{}
+\cventry{2013}{Electrical Engineering Hardware Student}{Sensor Team \newline{}Lexmark International, Inc.}{Lexington, KY}{}{}
+\cventry{2012}{Graduate Research Assistant}{Center for Visualization and Virtual Environments\newline{}University of Kentucky}{Lexington, KY}{}{}
+\cventry{2012}{Electrical Engineering Hardware Student}{Sensor Team \newline{}Lexmark International, Inc.}{Lexington, KY}{}{}
+\cventry{2011--2012}{Teaching Assistant}{EE280 - Design of Logic Circuits\newline{}University of Kentucky}{Lexington, KY}{}{}
+\cventry{2011}{Electrical Engineering Hardware Student}{Sensor Team \newline{}Lexmark International, Inc.}{Lexington, KY}{}{}
+\cventry{2009--2010}{Research Assistant}{Applied Physics Institute\newline{}Western Kentucky University}{Bowling Green, KY}{}{}
+
+\section{Funding}
+\cventry{2015--pres}{Ruth L. Kirschstein Predoctoral Individual NRSA (NIH F31)}{\newline{}National Institutes of Health: National Heart, Lung, and Blood Institute}{\newline{}April 15, 2015 (3 years of funding)}{}{}
+
+\section{Honors and Awards}
+\cvitem{2013}{Eta Kappa Nu Outstanding Electrical and Computer Engineering Graduate Student}
+\cvitem{2012--2013}{Dr. Robert D. Hayest Fellowship}
+\cvitem{2012--2013}{Lexmark Fellowship}
+\cvitem{2013}{\textit{President}, Eta Kappa Nu (EE Honor Society) Beta Upsilon Chapter}
+\cvitem{2012--}{Member, Eta Kappa Nu}
+\cvitem{2011--2012}{Research Challenge Trust Fund Fellowship}
+\cvitem{2011--2012}{Teaching Assistantship}
+\cvitem{2010}{Summa Cum Laude Graduate of WKU}
+\cvitem{2010}{Passed Fundamentals of Engineering (FE) Exam}
+\cvitem{2010}{Academic Excellence Award for the College of Engineering (WKU)}
+\cvitem{2010}{Only Student Leadership Representative for Electrical Engineering Department}
+\cvitem{2010}{\textit{Charter President}, Tau Beta Pi (National Engineering Honor Society)}
+\cvitem{2010--}{Member, Tau Beta Pi}
+\cvitem{2009}{IEEE Southeastern Conference Robotics Competition (7th Place)}
+\cvitem{2009}{\textit{Treasurer}, IEEE}
+\cvitem{2009}{Attended National Convention as only student representative to bid for WKU EHS to become new Tau Beta Pi Chapter}
+\cvitem{2009--2010}{\textit{President}, WKU Engineering Honor Society}
+\cvitem{2009--2010}{Member, WKU Engineering Honor Society}
+\cvitem{2008--}{Member, IEEE}
+\cvitem{2006--2010}{Ogden Scholarship}
+\cvitem{2006--2010}{Regent's Scholarship}
+\cvitem{2006--2007}{Siemens/NACO Buchanon Scholarship}
+
+\section{Publications}
+\cvitem{2017}{\textbf{Hamlet SM}, Haggerty CM, Suever JD, Wehner GJ, Andres KN, Powell DK, Charnigo RJ, and
+	Fornwalt BK. Using a respiratory navigator significantly reduces variability when quantifying left
+	ventricular torsion with cardiovascular magnetic resonance. Journal of Cardiovascular Magnetic
+	Resonance. 2017, 19(1):25. doi: 10.1186/s12968-017-0338-6}
+\cvitem{2016}{\textbf{Hamlet SM}, Haggerty CM, Suever JD, Wehner GJ, Grabau JD, Andres KN, Vandsburger MH, Powell
+	DK, Sorrell VJ, and Fornwalt BK. An interactive videogame designed to improve respiratory navigator
+	efficiency in children undergoing cardiac magnetic resonance. Journal of Cardiovascular Magnetic
+	Resonance. 2016, 18(1):54. doi: 10.1186/s12968-016-0272-z}
+\cvitem{2017}{\textbf{Hamlet SM}, Haggerty CM, Suever JD, Wehner GJ, Andres KN, Powell DK and Fornwalt BK.
+	Optimal configuration of respiratory navigator gating for the quantification of left ventricular strain
+	using spiral cine displacement encoding with stimulated echoes (DENSE) MRI. Journal of Magnetic
+	Resonance Imaging. 2017, 45(3):786–794. doi: 10.1002/jmri.25389}
+\cvitem{2017}{Suever JD, Wehner GJ, Jing L, Powell DK, \textbf{Hamlet SM}, Grabau JD, Mojsejenko WD, Andres KN,
+	Haggerty CM, Fornwalt BK: Right Ventricular Strain, Torsion, and Dyssynchrony in Healthy Subjects
+	Using 3D Spiral Cine DENSE Magnetic Resonance Imaging. IEEE Transactions on Medical Imaging
+	2017, 36(5):1076-1085.}
+\cvitem{2016}{Jing L, Binkley CM, Suever JD, Umasankar N, Haggerty CM, Rich J, Nevius CD, Wehner GJ, \textbf{Hamlet SM}, Powell DK, Radulescu A, Kirchner HL, Epstein FH, Fornwalt BK: Cardiac remodeling and dysfunction in childhood obesity: a cardiovascular magnetic resonance study. J Cardiovasc Magn Reson 2016, 18:28.}
+\cvitem{2015}{Wehner GJ, Grabau JD, Suever JD, Haggerty CM, Jing L, Powell DK, \textbf{Hamlet SM}, Vandsburger,
+	MH, Zhong X, Fornwalt BK. 2D cine DENSE with low encoding frequencies accurately quantifies
+	cardiac mechanics with improved image characteristics. Journal of Cardiovascular Magnetic
+	Resonance. 2015, 17(1):93}
+\cvitem{2015}{Wehner GJ, Suever JD, Haggerty CM, Jing L, Powell DK, \textbf{Hamlet SM}, Grabau JD, Mojsejenko
+	WD, Zhong X, Epstein FH, Fornwalt BK. Validation of in vivo 2D displacements from spiral cine
+	DENSE at 3T. Journal of Cardiovascular Magnetic Resonance. 2015, 17(1):5}
+\cvitem{2014}{Suever JD, Wehner GJ, Haggerty CM, Jing L, \textbf{Hamlet SM}, Binkley CM, Kramer SP, Mattingly AC,
+	Powell DK, Bilchick KC, Epstein FH, Fornwalt BK: Simplified post processing of cine DENSE
+	cardiovascular magnetic resonance for quantification of cardiac mechanics. Journal of Cardiovascular
+	Magnetic Resonance 2014, 16:94.}
+\cvitem{2012}{\textbf{Hamlet SM}: Comparing Acoustic Glottal Feature Extraction Methods with Simultaneously Recorded
+	High-Speed Video Features for Clinically Obtained Data.. Theses and Dissertations--Electrical and
+	Computer Engineering 2012, Paper 12. http://uknowledge.uky.edu/ece\_etds/12}
+
+\section{International Conference Abstracts}
+\cvitem{2017}{\textbf{Hamlet SM}, Haggerty CM, Suever JD, Wehner GJ, Andres KA, Powell DK, Charnigo RJ, Fornwalt BK,
+	Using a respiratory navigator significantly reduces variability when quantifying left ventricular torsion from CMR, Society of Cardiovascular Magnetic Resonance Scientific Sessions, Washington, DC, February 2017.}
+\cvitem{2016}{\textbf{Hamlet SM}, Suever JD, Grabau JD, Wehner GJ, Vandsburger MH, Andres KA, Powell DK, Sorrell VL, Fornwalt BK,
+	An interactive videogame designed to optimize respiratory navigator efficiency in children undergoing cardiac magnetic resonance, Society of Cardiovascular Magnetic Resonance Scientific Sessions, Los Angeles, CA, January 2016.}
+\cvitem{2015}{\textbf{Hamlet SM}, Andres KA, Wehner GJ, Suever JD, Powell DK, Zhong X, Epstein FH, Fornwalt BK,
+	Patient-specific variability in breath-hold positions during cardiac magnetic resonance imaging
+	has a negligible effect on quantification of cardiac mechanics, Society of Cardiovascular
+	Magnetic Resonance Scientific Sessions, Nice, France, February 2015.}
+\cvitem{2015}{\textbf{Hamlet SM}, Andres KA, Wehner GJ, Suever JD, Powell DK, Zhong X, Epstein FH, Fornwalt BK, The
+	effect of respiratory gating strategy on left ventricular cardiac strains with DENSE magnetic
+	resonance imaging, Society of Cardiovascular Magnetic Resonance Scientific Sessions, Nice,
+	France, February 2015.}
+\cvitem{2014}{\textbf{Hamlet SM}, Wehner GW, Suever JD, Powell DK, Haggerty CM, Jing L, Zhong X, Epstein FH, Fornwalt
+	BK, Effect of Variable Breath-hold Positions During Cardiac Magnetic Resonance on Measures of Left
+	Ventricular Mechanics, Society of Cardiovascular Magnetic Resonance Scientific Sessions, New
+	Orleans, LA, January 2014.}
+\cvitem{2013}{\textbf{Hamlet SM}, Donohue KD, Unnikrishnan H, Patel RR, Acoustic and High-Speed Video Synchronization
+	of Clinical Recordings for Enhanced Feature Estimations, Proceedings of the 10 International
+	Conference on Advances in Quantitative Laryngology, Voice and Speech Research, Cincinnati, OH, June
+	2013.}
+\cvitem{2009}{\textbf{Hamlet SM}, Simpson M, Morrison T, Berry A, Lodmell M, Re-Engineering of a User-Controlled
+	Robotic ATV Platform, 20th Annual Argonne Symposium for Undergraduates, Lemont, IL, November
+	2009.}
+
+\end{document}
+
+
+%% end of file `template.tex'.
