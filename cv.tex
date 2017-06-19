@@ -6,10 +6,10 @@
 % available at http://www.latex-project.org/lppl/.
 
 
-\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\documentclass[12pt,letterpaper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
 % moderncv themes
-\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
 \moderncvcolor{black}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
 %\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
 %\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
@@ -19,12 +19,14 @@
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
 % adjust the page margins
-\usepackage[scale=0.75]{geometry}
+\usepackage[]{geometry}
+\newgeometry{top=1in, right=1in, bottom=1in, left=1.5in}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
+
 % personal data
-\name{Sean}{Michael Hamlet}
+\name{Sean Michael}{Hamlet}
 \title{Vita}
 
 % bibliography adjustements (only useful if you make citations in your resume, or print a list of publications using BibTeX)
@@ -40,12 +42,15 @@
 %            content
 %----------------------------------------------------------------------------------
 \begin{document}
+
 %\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
+\rfoot{} % remove old page format: right-hand 117/120
+\cfoot{\thepage} % insert new page format: center 117
+\setcounter{page}{117} % restart page counter
 
 \section{Education}
-\cventry{2013--2017}{Doctor of Philosophy in Electrical Engineering}{\newline{}University of Kentucky}{Lexington, KY}{}{\textit{GPA - 4.0}}  % arguments 3 to 6 can be left empty
 \cventry{2011--2012}{Master of Science in Electrical Engineering}{\newline{}University of Kentucky}{Lexington, KY}{}{\textit{GPA - 4.0}}
 \cventry{2006--2010}{Bachelor of Science in Electrical Engineering}{\newline{}Western Kentucky University}{Bowling Green, KY}{}{\textit{GPA - 4.0}}
 
