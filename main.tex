@@ -4,7 +4,7 @@
 \usepackage{setspace} % allows doublespacing with the \doublespacing command
 \usepackage{tocloft} % modify table of contents
 \usepackage[hidelinks, linkcolor=black, urlcolor=black, bookmarksopen=true, pdftitle="Sean Hamlet's Thesis", pdfauthor="Sean Michael Hamlet"]{hyperref}
-\usepackage{bookmark}
+\usepackage[level, numbered]{bookmark}
 \usepackage{titlesec} % edit formatting of headings
 \usepackage{titletoc} % edit formatting of table of contents
 \usepackage{graphicx} % insert figure graphics
@@ -54,6 +54,8 @@
 
 
 \begin{document}
+	
+\pagenumbering{gobble} % remove page numbering from front pages
 
 % front matter
 \include{frontmatter/titlepage}
@@ -90,7 +92,12 @@
 
 \singlespacing
 \bibliographystyle{refs/dissertationstyle}
+\addcontentsline{toc}{part}{Bibliography}
 \bibliography{refs/Dissertation}
+
+\newpage
+\thispagestyle{empty}
+\mbox{}
 
 \addcontentsline{toc}{part}{Vita}
 
